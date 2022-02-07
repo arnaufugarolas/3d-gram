@@ -12,16 +12,17 @@
 </head>
 <body>
     <form>
+        
         <div class="logear" id="loginForm">
         <div class="Index">
             <label for="gmail" class="incio">Correu electrònic:</label>
-            <div class="col-8">
+            <div class="definir">
                 <input type="email" class="form-control" id="gmail">
             </div>
         </div>
         <div class="Index">
             <label for="contraseña" class="inicio">Contrasenya:</label>
-            <div class="col-8">
+            <div class="definir">
                 <input type="password" class="form-control" id="contraseña">
             </div>
         </div>
@@ -31,7 +32,35 @@
                 <button type="button" id="entrada" class="btn btn-default float-right mr-3">Entrar</button>
             </div> 
         </div>
-    </div>
+        </div>
+
+        <div class="col-8 offset-2" id="signupForm" style="display: none;">
+            <form>
+                <div class="Index">
+                    <label for="title" class="col-4 col-form-label">Correu electrònic:</label>
+                    <div class="definir">
+                        <input type="email" class="form-control" id="Reg_email">
+                    </div>
+                </div>
+                <div class="Index">
+                    <label for="content" class="col-4 col-form-label">Contrasenya:</label>
+                    <div class="definir">
+                        <input type="password" class="form-control" id="Reg_contra">
+                    </div>
+                </div>
+                <div class="Index">
+                    <label for="content" class="col-4 col-form-label">Confirmar contrasenya:</label>
+                    <div class="definir">
+                        <input type="password" class="form-control" id="Reg_confirmar">
+                    </div>
+                </div>
+                <div class="Index">
+                    <div class="offset-4 col-8">
+                        <button type="button" id="signup" class="btn btn-default float-right">Enviar</button>
+                    </div> 
+                </div>
+            </form>
+        </div>
     </form>
     <div id="alert" role="alert"></div>
 </body>
