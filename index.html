@@ -56,7 +56,7 @@
                 </div>
                 <div class="Index">
                     <div class="offset-4 col-8">
-                        <button type="button" id="signup" class="btn btn-default float-right">Enviar</button>
+                        <button type="button" id="enviado" class="btn btn-default float-right">Enviar</button>
                     </div> 
                 </div>
             </form>
@@ -87,5 +87,33 @@
                 showAlert("Error d’autenticació", "alert-danger");
             });
     });
+    document.getElementById("enviado").addEventListener("click", function() {
+			let email = document.getElementById("Reg_email").value;
+			let password = document.getElementById("Reg_contra").value;
+			let passwordConfirm = document.getElementById("Reg_confirmar").value;
+
+			if (email.length > 0 && email.indexOf("@") > 1) {
+				if (password.length > 0) {
+					if (password == passwordConfirm) {
+						auth.createUserWithEmailAndPassword(email, password)
+						.then(function() {			
+							showAlert("Usuari creat correctament", "alert-success");
+
+							document.getElementById("loginForm").style.display = "block";
+							document.getElementById("signupForm").style.display = "none";
+						})
+						.catch(function(error) {
+							showAlert("Error al intentar crear l'usuari", "alert-danger");
+						});
+					} else {
+						showAlert("Les contrasenyes no coincideixen", "alert-danger");
+					}
+				} else {
+					showAlert("La contrasenya és obligatòria", "alert-danger");
+				}
+			} else {
+				showAlert("Email incorrecte", "alert-danger");
+			}
+		});
 </script>
 </html>
