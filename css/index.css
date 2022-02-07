@@ -1,0 +1,25 @@
+body{
+    background-image:url("https://firebasestorage.googleapis.com/v0/b/d-gram-3331d.appspot.com/o/WebImages%2FProyecto.png?alt=media&token=64d16d05-9832-42bd-a58a-4066c172aaf2");
+    background:  center center cover no-repeat fixed;
+}
+.Derecha{
+    float:left;
+    width: 30%;
+    height: 100%;
+    margin: 100px;
+    padding: 10px;
+    padding-bottom: 35px;
+    padding-right: 30px;
+    border: 3px solid #112D4E;
+    background: #DBE2EF;
+    border-radius: 20px;
+}
+.Titulo{
+font-family: Arial;
+font-size: x-large;
+color: darkblue;
+}
+.Descripcion{
+font-family: "Segoe IU", sans-serif;
+font-size: large;
+}
