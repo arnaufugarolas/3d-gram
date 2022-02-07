@@ -12,7 +12,6 @@
 </head>
 <body>
     <form>
-        
         <div class="logear" id="loginForm">
         <div class="Index">
             <label for="gmail" class="incio">Correu electrònic:</label>
@@ -64,15 +63,15 @@
     </form>
     <div id="alert" role="alert"></div>
 </body>
-<script language="javascript" src="js/config.js"></script>
-<script language="javascript" src="js/firestore.js"></script>
-<script language="javascript" src="js/storage.js"></script>
-<script language="javascript" src="js/functions.js"></script>
+<script src="js/config.js"></script>
+<script src="js/firestore.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/functions.js"></script>
 
 <script>
     		document.getElementById("usuarionuevo").addEventListener("click", function() {
-			document.getElementById("loginForm").style.display = "none";
-			document.getElementById("signupForm").style.display = "block";
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("signupForm").style.display = "block";
 		});
 
     document.getElementById("entrada").addEventListener("click", function() {
@@ -82,6 +81,7 @@
         auth.signInWithEmailAndPassword(email, password)
             .then(function() {
                 showAlert("Usuari autenticat", "alert-success");
+
             })
             .catch(function(error) {
                 showAlert("Error d’autenticació", "alert-danger");
