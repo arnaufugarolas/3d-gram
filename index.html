@@ -67,27 +67,16 @@
 <script language="javascript" src="js/config.js"></script>
 <script language="javascript" src="js/firestore.js"></script>
 <script language="javascript" src="js/storage.js"></script>
+<script language="javascript" src="js/functions.js"></script>
+
 <script>
     document.getElementById("entrada").addEventListener("click", function() {
         let email = document.getElementById("gmail").value;
         let password = document.getElementById("contraseña").value;
 
-        function showAlert(text, type) {
-            document.getElementById("alert").innerText = text;
-            document.getElementById("alert").className = "alert " + type;
-            document.getElementById("alert").style.display = "block";
-            window.setTimeout(function() {
-                document.getElementById("alert").style.display = "none";
-            }, 2000);
-        }
-
         auth.signInWithEmailAndPassword(email, password)
             .then(function() {
                 showAlert("Usuari autenticat", "alert-success");
-
-                document.getElementById("loginForm").style.display = "none";
-                document.getElementById("itemsForm").style.display = "block";
-                document.getElementById("listItems").style.display = "table";
             })
             .catch(function(error) {
                 showAlert("Error d’autenticació", "alert-danger");
