@@ -39,7 +39,7 @@
         let email = document.getElementById("gmail").value;
         let password = document.getElementById("contraseña").value;
 
-        auth.signInWithEmailAndPassword(email, password)
+        app.signInWithEmailAndPassword(email, password)
             .then(function() {
                 showAlert("Usuari autenticat", "alert-success");
 
