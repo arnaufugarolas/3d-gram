@@ -2,7 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>3D-gram</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 </head>
 <body>
     <form>
@@ -29,4 +34,22 @@
     </form>
 </body>
 <script language="javascript" src="js/config.js"></script>
+<script>
+    document.getElementById("entrada").addEventListener("submit", function() {
+        let email = document.getElementById("gmail").value;
+        let password = document.getElementById("contraseña").value;
+
+        auth.signInWithEmailAndPassword(email, password)
+            .then(function() {
+                showAlert("Usuari autenticat", "alert-success");
+
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("itemsForm").style.display = "block";
+                document.getElementById("listItems").style.display = "table";
+            })
+            .catch(function(error) {
+                showAlert("Error d’autenticació", "alert-danger");
+            });
+    });
+</script>
 </html>
