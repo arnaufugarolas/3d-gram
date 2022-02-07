@@ -70,6 +70,11 @@
 <script language="javascript" src="js/functions.js"></script>
 
 <script>
+    		document.getElementById("usuarionuevo").addEventListener("click", function() {
+			document.getElementById("loginForm").style.display = "none";
+			document.getElementById("signupForm").style.display = "block";
+		});
+
     document.getElementById("entrada").addEventListener("click", function() {
         let email = document.getElementById("gmail").value;
         let password = document.getElementById("contraseña").value;
