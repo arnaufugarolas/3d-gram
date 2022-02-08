@@ -1,6 +1,7 @@
 body{
-    background-image:url();
-    background:  center center cover no-repeat fixed;
+    background-image:url(../css/soft-blue-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .Derecha{
     float:left;
