@@ -29,13 +29,3 @@ function uploadFile(url) {
         }
     });
 }
-
-function getUrl(dir) {
-    storageRef.child(dir).getDownloadURL()
-        .then((url) => {
-            return url
-        })
-        .catch((error) => {
-            return error
-        });
-}
