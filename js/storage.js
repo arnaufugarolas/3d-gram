@@ -1,4 +1,5 @@
 const storage = firebase.storage();
+var storageRef = storage.ref();
 
 function deleteFile(url) {
     return new Promise((resolve, reject) => {
@@ -27,4 +28,14 @@ function uploadFile(url) {
             });
         }
     });
+}
+
+function getUrl(dir) {
+    storageRef.child(dir).getDownloadURL()
+        .then((url) => {
+            return url
+        })
+        .catch((error) => {
+            return error
+        });
 }
