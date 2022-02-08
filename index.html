@@ -87,7 +87,7 @@
                 showAlert("Usuari autenticat", "alert-success");
 
             })
-            .catch(function(error) {
+            .catch(function() {
                 showAlert("Error d’autenticació", "alert-danger");
             });
     });
@@ -106,7 +106,7 @@
 							document.getElementById("loginForm").style.display = "block";
 							document.getElementById("signupForm").style.display = "none";
 						})
-						.catch(function(error) {
+						.catch(function() {
 							showAlert("Error al intentar crear l'usuari", "alert-danger");
 						});
 					} else {
