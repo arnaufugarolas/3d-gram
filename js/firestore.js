@@ -1,4 +1,3 @@
-const db = firebase.firestore();
 
 function add(collection, doc) {
     return new Promise((resolve, reject) => {
