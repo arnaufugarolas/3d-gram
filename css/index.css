@@ -1,5 +1,5 @@
 body{
-    background-color: #0051f4;
+    background-color: #0040C1;
 }
 .Derecha{
     float:left;
@@ -108,34 +108,17 @@ font-size: large;
     background: #e2e5ed;
     border-radius: 20px;
 }
-/*fondo animado (mal hecho porque no se me da bien, luego lo arreglo)*/
+/*fondo animado */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700");
-.hero {
-  background-color: #0040C1;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.hero__title {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 50px;
-  z-index: 1;
-}
 
 .cube {
+    z-index: -5;
   position: absolute;
   top: 80vh;
   left: 45vw;
   width: 10px;
   height: 10px;
-  border: solid 1px #003298;
+  border: solid 1px #0040C1;
   -webkit-transform-origin: top left;
           transform-origin: top left;
   -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
@@ -144,33 +127,39 @@ font-size: large;
           animation: cube 12s ease-in forwards infinite;
 }
 .cube:nth-child(2n) {
-  border-color: #0051f4;
+    z-index: -5;
+  border-color: #003298;
 }
 .cube:nth-child(2) {
+    z-index: -5;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   left: 25vw;
-  top: 40vh;
+  top: 80vh;
 }
 .cube:nth-child(3) {
+    z-index: -5;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   left: 75vw;
   top: 50vh;
 }
 .cube:nth-child(4) {
+    z-index: -5;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   left: 90vw;
   top: 10vh;
 }
 .cube:nth-child(5) {
+    z-index: -5;
   -webkit-animation-delay: 8s;
           animation-delay: 8s;
   left: 10vw;
   top: 85vh;
 }
 .cube:nth-child(6) {
+    z-index: -5;
   -webkit-animation-delay: 10s;
           animation-delay: 10s;
   left: 50vw;
