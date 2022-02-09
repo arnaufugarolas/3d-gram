@@ -1,13 +1,12 @@
-const items = db.collection("items");
-const categories = db.collection("categories");
+const items = db.collection("images");
 
 function addItem(doc) {
     add(items, doc)
         .then(() => {
             loadItems();
 
-            document.getElementById("title").value = "";
-            document.getElementById("content").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("description").value = "";
             document.getElementById("image").value = "";
 
             showAlert("Element guardat correctament", "alert-success");
@@ -89,8 +88,8 @@ function updateItem(id, doc) {
             loadItems();
 
             document.getElementById("elementId").value = "";
-            document.getElementById("title").value = "";
-            document.getElementById("content").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("description").value = "";
             document.getElementById("image").value = "";
             document.getElementById("thumbnail").style.visibility = "hidden";
 

@@ -8,3 +8,5 @@ firebase.initializeApp({
 });
 
 const auth = firebase.auth();
+const storage = firebase.storage();
+const db = firebase.firestore();
