@@ -81,6 +81,7 @@
                 </div>
             </form>
         </div>
+        <div class="alertas" id="alerta">buenas tardes</div>
     </form>
     <div id="alert" role="alert"></div>
 </body>
@@ -98,6 +99,7 @@
     document.getElementById("entrada").addEventListener("click", function() {
         let email = document.getElementById("gmail").value;
         let password = document.getElementById("contraseña").value;
+        let alerta = document.getElementById("alerta").value;
 
         auth.signInWithEmailAndPassword(email, password)
             .then(function() {
