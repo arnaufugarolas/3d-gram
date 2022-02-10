@@ -1,4 +1,3 @@
-
 function add(collection, doc) {
     return new Promise((resolve, reject) => {
         collection.add(doc)
