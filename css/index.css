@@ -1,193 +1,199 @@
-body{
+/*fondo animado */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+
+body {
     background-color: #0040C1;
 }
-.Derecha{
-    float:left;
+
+.Derecha {
+    float: left;
     width: 30%;
     height: 100%;
     margin: 100px;
-    padding: 10px;
-    padding-bottom: 35px;
-    padding-right: 30px;
+    padding: 10px 30px 35px 10px;
     border: 3px solid #112D4E;
     background: #DBE2EF;
     border-radius: 20px;
 }
-.Titulo{
-font-family: Arial;
-font-size: x-large;
-color: darkblue;
+
+.Titulo {
+    font-family: Arial, serif;
+    font-size: x-large;
+    color: darkblue;
 }
-.Descripcion{
-font-family:Arial;
-font-size: large;
+
+.Descripcion {
+    font-family: Arial, serif;
+    font-size: large;
 }
-.caja{
+
+.caja {
     padding-top: 100px;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/d-gram-3331d.appspot.com/o/WebImages%2FLogos%2F3D-LOGO.png?alt=media&token=e5a2154f-c573-4b5b-a289-eddb41405f6b");
-    background:  center center cover no-repeat fixed;
-    background-repeat: no-repeat;
+    background: url("https://firebasestorage.googleapis.com/v0/b/d-gram-3331d.appspot.com/o/WebImages%2FLogos%2F3D-LOGO.png?alt=media&token=e5a2154f-c573-4b5b-a289-eddb41405f6b") no-repeat fixed center center;
     background-position-x: 50%;
     background-position-y: -35px;
     width: 100%;
     height: 20%;
     z-index: 6;
 }
-.logear{
-    float:right;
+
+.logear {
+    float: right;
     width: 500px;
     height: 500px;
     margin: 100px;
-    padding: 10px;
-    padding-bottom: 35px;
+    padding: 10px 10px 35px;
     border: 3px solid #3b5998;
     background: #e2e5ed;
     border-radius: 20px;
 }
-.Index{
+
+.Index {
     margin-top: 15px;
     border-radius: 3px;
-    font-size:xx-large;
+    font-size: xx-large;
     padding: 10px;
     color: #3b5998;
     height: 50px;
     margin-bottom: 50px;
 }
-.field{
+
+.field {
     margin-top: 10px;
     border: solid 2px #a386cc;
     border-radius: 8px;
     width: 420px;
-    font-size:x-large;
-    padding: 10px;
+    font-size: x-large;
     background: #f5f5f5;
     color: #3b5998;
-    padding-top: 15px;
+    padding: 15px 10px 10px;
 }
-.botoncito{
-    border: 3px solid #112D4E;
+
+.botoncito {
+    border: 3px solid #3b5998;
     border-radius: 10px;
     font-size: x-large;
-    color:#DBE2EF;
+    color: #DBE2EF;
     background: #3b5998;
-    border-color: #3b5998;
     float: left;
     margin-left: 55px;
     height: 60px;
     width: 350px;
 }
-.botoncito2{
+
+.botoncito2 {
     margin-top: 22px;
     border: 3px solid #112D4E;
-    border-radius: 0px;
     font-size: x-large;
-    color:#DBE2EF;
+    color: #DBE2EF;
     background: #112D4E;
-    border-color: #112D4E;
     float: left;
     height: 80px;
     margin-left: -4.5%;
     width: 109%;
-    border-bottom-left-radius: 19px;
-    border-bottom-right-radius: 19px;
+    border-radius: 0 0 19px 19px;
 }
-.CrearCuenta{
+
+.CrearCuenta {
     font-size: x-large;
     padding-top: 80px;
     padding-left: 22%;
 }
 
-.Registro{
-    float:right;
+.Registro {
+    float: right;
     width: 480px;
     height: 600px;
     margin: 100px;
-    padding: 10px;
-    padding-bottom: 35px;
+    padding: 10px 10px 35px;
     border: 3px solid #3b5998;
     background: #e2e5ed;
     border-radius: 20px;
 }
-/*fondo animado */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
 
 .cube {
     z-index: -5;
-  position: absolute;
-  top: 80vh;
-  left: 45vw;
-  width: 10px;
-  height: 10px;
-  border: solid 1px #0040C1;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
-          transform: scale(0) rotate(0deg) translate(-50%, -50%);
-  -webkit-animation: cube 12s ease-in forwards infinite;
-          animation: cube 12s ease-in forwards infinite;
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #0040C1;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-animation: cube 12s ease-in forwards infinite;
+    animation: cube 12s ease-in forwards infinite;
 }
+
 .cube:nth-child(2n) {
     z-index: -5;
-  border-color: #003298;
+    border-color: #003298;
 }
+
 .cube:nth-child(2) {
     z-index: -5;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  left: 25vw;
-  top: 80vh;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    left: 25vw;
+    top: 80vh;
 }
+
 .cube:nth-child(3) {
     z-index: -5;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  left: 75vw;
-  top: 50vh;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
 }
+
 .cube:nth-child(4) {
     z-index: -5;
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
-  left: 90vw;
-  top: 10vh;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
 }
+
 .cube:nth-child(5) {
     z-index: -5;
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
-  left: 10vw;
-  top: 85vh;
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
 }
+
 .cube:nth-child(6) {
     z-index: -5;
-  -webkit-animation-delay: 10s;
-          animation-delay: 10s;
-  left: 50vw;
-  top: 10vh;
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
 }
 
 @-webkit-keyframes cube {
-  from {
-    -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
-            transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
-            transform: scale(20) rotate(960deg) translate(-50%, -50%);
-    opacity: 0;
-  }
+    from {
+        -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
 }
 
 @keyframes cube {
-  from {
-    -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
-            transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
-            transform: scale(20) rotate(960deg) translate(-50%, -50%);
-    opacity: 0;
-  }
+    from {
+        -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
 }
