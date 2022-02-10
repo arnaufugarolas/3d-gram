@@ -27,15 +27,10 @@
                 </div>
             </div>
             <div class="Index">
-                <label for="contraseña" class="inicio">Contrasenya:</label>
+                <label for="contrasenya" class="inicio">Contrasenya:</label>
                 <div class="definir">
-                    <input type="password" class="field" id="contraseña" value="3d-gram">
+                    <input type="password" class="field" id="contrasenya" value="3d-gram">
                 </div>
-            </div>
-            <div class="alert alert-danger" id="alert" role="alert" style="visibility: hidden;">
-
-                Debes indicar el nombre de usuario y la contraseña
-                
             </div>
             <div class="Index">
                 <div class="offset-4 col-8">
@@ -89,27 +84,6 @@
 <script src="js/functions.js"></script>
 
 <script>
-    //Capturar valores de los campos 
-		
-			document.getElementById("entrar").addEventListener("click",function(){
-				
-                let usuario = document.getElementById('usuario').value;
-                let  contrasena = document.getElementById('contrasena').value;
-    
-                console.log(usuario);
-                console.log(contrasena);
-                //Validar los campos
-                if(usuario == "" || contrasena.length<8 ){
-                    document.getElementById("alert").style.visibility="visible"
-                 }
-                else{
-                    document.getElementById("alert").style.visibility="hidden"
-                 }
-                });
-
-
-
-    
     document.getElementById("usuarionuevo").addEventListener("click", function() {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("signupForm").style.display = "block";
