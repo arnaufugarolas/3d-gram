@@ -1,4 +1,4 @@
-var storageRef = storage.ref();
+let storageRef = storage.ref();
 
 function deleteFile(url) {
     return new Promise((resolve, reject) => {

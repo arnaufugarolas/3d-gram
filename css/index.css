@@ -9,7 +9,7 @@ body{
     padding: 10px;
     padding-bottom: 35px;
     padding-right: 30px;
-    border: 3px solid #0040C1;
+    border: 3px solid #112D4E;
     background: #DBE2EF;
     border-radius: 20px;
 }
@@ -100,7 +100,7 @@ font-size: large;
 .Registro{
     float:right;
     width: 480px;
-    height: 550px;
+    height: 600px;
     margin: 100px;
     padding: 10px;
     padding-bottom: 35px;
@@ -109,9 +109,6 @@ font-size: large;
     border-radius: 20px;
 }
 /*fondo animado */
-::-webkit-scrollbar {
-    display: none;
-}
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700");
 
 .cube {
@@ -135,36 +132,36 @@ font-size: large;
 }
 .cube:nth-child(2) {
     z-index: -5;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   left: 25vw;
   top: 80vh;
 }
 .cube:nth-child(3) {
     z-index: -5;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
   left: 75vw;
   top: 50vh;
 }
 .cube:nth-child(4) {
     z-index: -5;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
   left: 90vw;
   top: 10vh;
 }
 .cube:nth-child(5) {
     z-index: -5;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
   left: 10vw;
   top: 85vh;
 }
 .cube:nth-child(6) {
     z-index: -5;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
   left: 50vw;
   top: 10vh;
 }
