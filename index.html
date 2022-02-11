@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>3D-gram</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link href="css/index.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -14,22 +14,23 @@
 <form>
     <div class="cube"></div>
     <div class="Derecha">
-        <div class = "Titulo"><h2>3D-gram</h2></div>
-        <div class = "Descripcion"><h3>Bienvenido a 3D-Gram, con nuestra aplicación puedes ver diseños de impresión 3D, ademas puedes subir tus propios diseños para que la gente los vea i descargue!</h3></div>
+        <div class="Titulo"><h2>3D-gram</h2></div>
+        <div class="Descripcion"><h3>Bienvenido a 3D-Gram, con nuestra aplicación puedes ver diseños de impresión 3D,
+            ademas puedes subir tus propios diseños para que la gente los vea i descargue!</h3></div>
     </div>
     <div class="logear" id="loginForm">
         <div class="caja">
             <div class="imagenLogo"></div>
             <div class="Index">
-                <label for="gmail" class="inicio">Correu electrònic:</label>
+                <label class="inicio" for="gmail">Correu electrònic:</label>
                 <div class="definir">
-                    <input type="email" class="field" id="gmail" >
+                    <input class="field" id="gmail" type="email">
                 </div>
             </div>
             <div class="Index">
-                <label for="contraseña" class="inicio">Contrasenya:</label>
+                <label class="inicio" for="contraseña">Contrasenya:</label>
                 <div class="definir">
-                    <input type="password" class="field" id="contraseña" >
+                    <input class="field" id="contraseña" type="password">
                 </div>
             </div>
             <div class="alert alert-danger" id="alert" role="alert" style="visibility: hidden;">
@@ -40,9 +41,9 @@
 
             <div class="Index">
                 <div class="offset-4 col-8">
-                    <button type="button" id="entrada" class="botoncito">Entrar</button>
+                    <button class="botoncito" id="entrada" type="button">Entrar</button>
                     <div class="CrearCuenta">No tienes cuenta?, creala!</div>
-                    <button type="button" id="usuarionuevo" class="botoncito2">Crear cuenta nueva</button>
+                    <button class="botoncito2" id="usuarionuevo" type="button">Crear cuenta nueva</button>
                 </div>
             </div>
         </div>
@@ -51,32 +52,32 @@
     <div class="Registro" id="signupForm" style="display: none;">
         <form>
             <div class="Index">
-                <label for="Reg_email" class="inicio">Correu electrònic:</label>
+                <label class="inicio" for="Reg_email">Correu electrònic:</label>
                 <div class="definir">
-                    <input type="email" class="field" id="Reg_email">
+                    <input class="field" id="Reg_email" type="email">
                 </div>
             </div>
             <div class="Index">
-                <label for="Reg_usuari" class="inicio">Usuario:</label>
+                <label class="inicio" for="Reg_usuari">Usuario:</label>
                 <div class="definir">
-                    <input type="text" class="field" id="Reg_usuari">
+                    <input class="field" id="Reg_usuari" type="text">
                 </div>
             </div>
             <div class="Index">
-                <label for="Reg_contra" class="inicio">Contrasenya:</label>
+                <label class="inicio" for="Reg_contra">Contrasenya:</label>
                 <div class="definir">
-                    <input type="password" class="field" id="Reg_contra">
+                    <input class="field" id="Reg_contra" type="password">
                 </div>
             </div>
             <div class="Index">
-                <label for="Reg_confirmar" class="inicio">Confirmar contrasenya:</label>
+                <label class="inicio" for="Reg_confirmar">Confirmar contrasenya:</label>
                 <div class="definir">
-                    <input type="password" class="field" id="Reg_confirmar">
+                    <input class="field" id="Reg_confirmar" type="password">
                 </div>
             </div>
-            <div class="Index" >
+            <div class="Index">
                 <div class="offset-4 col-8">
-                    <button type="button" id="enviado" class="botoncito">Enviar</button>
+                    <button class="botoncito" id="enviado" type="button">Enviar</button>
                 </div>
             </div>
         </form>
@@ -91,23 +92,22 @@
 <script>
     //Capturar valores de los campos
 
-    document.getElementById("entrada").addEventListener("click",function(){
+    document.getElementById("entrada").addEventListener("click", function () {
 
         let usuario = document.getElementById('gmail').value;
-        let  contrasena = document.getElementById('contraseña').value;
+        let contrasena = document.getElementById('contraseña').value;
 
         console.log(usuario);
         console.log(contrasena);
         //Validar los campos
-        if(usuario === "" || contrasena === "" ){
-            document.getElementById("alert").style.visibility="visible"
-        }
-        else{
-            document.getElementById("alert").style.visibility="hidden"
+        if (usuario === "" || contrasena === "") {
+            document.getElementById("alert").style.visibility = "visible"
+        } else {
+            document.getElementById("alert").style.visibility = "hidden"
         }
     });
 
-    document.getElementById("usuarionuevo").addEventListener("click", function() {
+    document.getElementById("usuarionuevo").addEventListener("click", function () {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("signupForm").style.display = "block";
     });
