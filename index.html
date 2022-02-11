@@ -11,74 +11,72 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 </head>
 <body>
-    <form>
-    <div class="hero"></div>
+<form>
     <div class="cube"></div>
-    <div class="hero_title"></div>
     <div class="Derecha">
         <div class = "Titulo"><h2>3D-gram</h2></div>
         <div class = "Descripcion"><h3>Bienvenido a 3D-Gram, con nuestra aplicación puedes ver diseños de impresión 3D, ademas puedes subir tus propios diseños para que la gente los vea i descargue!</h3></div>
     </div>
-        <div class="logear" id="loginForm">
+    <div class="logear" id="loginForm">
         <div class="caja">
-        <div class="imagenLogo"></div>
-        <div class="Index">
-            <label for="gmail" class="inicio">Correu electrònic:</label>
-            <div class="definir">
-                <input type="email" class="field" id="gmail" value="admin@3d-gram.com"> 
+            <div class="imagenLogo"></div>
+            <div class="Index">
+                <label for="gmail" class="inicio">Correu electrònic:</label>
+                <div class="definir">
+                    <input type="email" class="field" id="gmail" value="admin@3d-gram.com">
+                </div>
+            </div>
+            <div class="Index">
+                <label for="contraseña" class="inicio">Contrasenya:</label>
+                <div class="definir">
+                    <input type="password" class="field" id="contraseña" value="3d-gram">
+                </div>
+            </div>
+            <div class="Index">
+                <div class="offset-4 col-8">
+                    <button type="button" id="entrada" class="botoncito">Entrar</button>
+                    <div class="CrearCuenta">No tienes cuenta?, creala!</div>
+                    <button type="button" id="usuarionuevo" class="botoncito2">Crear cuenta nueva</button>
+                </div>
             </div>
         </div>
-        <div class="Index">
-            <label for="contraseña" class="inicio">Contrasenya:</label>
-            <div class="definir">
-                <input type="password" class="field" id="contraseña" value="3d-gram">
-            </div>
-        </div>
-        <div class="Index">
-            <div class="offset-4 col-8">
-                <button type="button" id="entrada" class="botoncito">Entrar</button>
-                <div class="CrearCuenta">No tienes cuenta?, creala!</div>
-                <button type="button" id="usuarionuevo" class="botoncito2">Crear cuenta nueva</button>
-            </div> 
-        </div>
-        </div>
-        </div>
+    </div>
 
-        <div class="Registro" id="signupForm" style="display: none;">
-            <form>
-                <div class="Index">
-                    <label for="Reg_email" class="inicio">Correu electrònic:</label>
-                    <div class="definir">
-                        <input type="email" class="field" id="Reg_email">
-                    </div>
+    <div class="Registro" id="signupForm" style="display: none;">
+        <form>
+            <div class="Index">
+                <label for="Reg_email" class="inicio">Correu electrònic:</label>
+                <div class="definir">
+                    <input type="email" class="field" id="Reg_email">
                 </div>
-                <div class="Index">
-                    <label for="Reg_usuari" class="inicio">Usuario:</label>
-                    <div class="definir">
-                        <input type="text" class="field" id="Reg_usuari">
-                    </div>
+            </div>
+            <div class="Index">
+                <label for="Reg_usuari" class="inicio">Usuario:</label>
+                <div class="definir">
+                    <input type="text" class="field" id="Reg_usuari">
                 </div>
-                <div class="Index">
-                    <label for="Reg_contra" class="inicio">Contrasenya:</label>
-                    <div class="definir">
-                        <input type="password" class="field" id="Reg_contra">
-                    </div>
+            </div>
+            <div class="Index">
+                <label for="Reg_contra" class="inicio">Contrasenya:</label>
+                <div class="definir">
+                    <input type="password" class="field" id="Reg_contra">
                 </div>
-                <div class="Index">
-                    <label for="Reg_confirmar" class="inicio">Confirmar contrasenya:</label>
-                    <div class="definir">
-                        <input type="password" class="field" id="Reg_confirmar">
-                    </div>
+            </div>
+            <div class="Index">
+                <label for="Reg_confirmar" class="inicio">Confirmar contrasenya:</label>
+                <div class="definir">
+                    <input type="password" class="field" id="Reg_confirmar">
                 </div>
-                <div class="Index" >
-                    <div class="offset-4 col-8">
-                        <button type="button" id="enviado" class="botoncito">Enviar</button>
-                    </div> 
+            </div>
+            <div class="Index" >
+                <div class="offset-4 col-8">
+                    <button type="button" id="enviado" class="botoncito">Enviar</button>
                 </div>
-            </form>
-        </div>
-    </form>
-    <div id="alert" role="alert"></div>
+            </div>
+        </form>
+    </div>
+</form>
+<div id="alert" role="alert"></div>
 </body>
 <script src="js/config.js"></script>
 <script src="js/firestore.js"></script>
@@ -86,10 +84,10 @@
 <script src="js/functions.js"></script>
 
 <script>
-    		document.getElementById("usuarionuevo").addEventListener("click", function() {
-                document.getElementById("loginForm").style.display = "none";
-                document.getElementById("signupForm").style.display = "block";
-		});
+    document.getElementById("usuarionuevo").addEventListener("click", function() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("signupForm").style.display = "block";
+    });
 
     document.getElementById("entrada").addEventListener("click", function() {
         let email = document.getElementById("gmail").value;
@@ -100,37 +98,37 @@
                 showAlert("Usuari autenticat", "alert-success");
 
             })
-            .catch(function(error) {
+            .catch(function() {
                 showAlert("Error d’autenticació", "alert-danger");
             });
     });
     document.getElementById("enviado").addEventListener("click", function() {
-			let email = document.getElementById("Reg_email").value;
-			let password = document.getElementById("Reg_contra").value;
-			let passwordConfirm = document.getElementById("Reg_confirmar").value;
+        let email = document.getElementById("Reg_email").value;
+        let password = document.getElementById("Reg_contra").value;
+        let passwordConfirm = document.getElementById("Reg_confirmar").value;
 
-			if (email.length > 0 && email.indexOf("@") > 1) {
-				if (password.length > 0) {
-					if (password == passwordConfirm) {
-						auth.createUserWithEmailAndPassword(email, password)
-						.then(function() {			
-							showAlert("Usuari creat correctament", "alert-success");
+        if (email.length > 0 && email.indexOf("@") > 1) {
+            if (password.length > 0) {
+                if (password === passwordConfirm) {
+                    auth.createUserWithEmailAndPassword(email, password)
+                        .then(function() {
+                            showAlert("Usuari creat correctament", "alert-success");
 
-							document.getElementById("loginForm").style.display = "block";
-							document.getElementById("signupForm").style.display = "none";
-						})
-						.catch(function(error) {
-							showAlert("Error al intentar crear l'usuari", "alert-danger");
-						});
-					} else {
-						showAlert("Les contrasenyes no coincideixen", "alert-danger");
-					}
-				} else {
-					showAlert("La contrasenya és obligatòria", "alert-danger");
-				}
-			} else {
-				showAlert("Email incorrecte", "alert-danger");
-			}
-		});
+                            document.getElementById("loginForm").style.display = "block";
+                            document.getElementById("signupForm").style.display = "none";
+                        })
+                        .catch(function() {
+                            showAlert("Error al intentar crear l'usuari", "alert-danger");
+                        });
+                } else {
+                    showAlert("Les contrasenyes no coincideixen", "alert-danger");
+                }
+            } else {
+                showAlert("La contrasenya és obligatòria", "alert-danger");
+            }
+        } else {
+            showAlert("Email incorrecte", "alert-danger");
+        }
+    });
 </script>
 </html>
