@@ -23,15 +23,21 @@
             <div class="Index">
                 <label for="gmail" class="inicio">Correu electrònic:</label>
                 <div class="definir">
-                    <input type="email" class="field" id="gmail" value="admin@3d-gram.com">
+                    <input type="email" class="field" id="gmail" >
                 </div>
             </div>
             <div class="Index">
                 <label for="contraseña" class="inicio">Contrasenya:</label>
                 <div class="definir">
-                    <input type="password" class="field" id="contraseña" value="3d-gram">
+                    <input type="password" class="field" id="contraseña" >
                 </div>
             </div>
+            <div class="alert alert-danger" id="alert" role="alert" style="visibility: hidden;">
+
+                Has d'introduir el correu i la contrasenya.
+                
+            </div>
+        
             <div class="Index">
                 <div class="offset-4 col-8">
                     <button type="button" id="entrada" class="botoncito">Entrar</button>
@@ -84,11 +90,34 @@
 <script src="js/functions.js"></script>
 
 <script>
+//Capturar valores de los campos 
+		
+document.getElementById("entrada").addEventListener("click",function(){
+				
+                let usuario = document.getElementById('gmail').value;
+                let  contrasena = document.getElementById('contraseña').value;
+    
+                console.log(usuario);
+                console.log(contrasena);
+                //Validar los campos
+                if(usuario == "" || contrasena == "" ){
+                    document.getElementById("alert").style.visibility="visible"
+                 }
+                else{
+                    document.getElementById("alert").style.visibility="hidden"
+                 }
+                });
+
+
+
+
+
+
     document.getElementById("usuarionuevo").addEventListener("click", function() {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("signupForm").style.display = "block";
     });
-
+/*
     document.getElementById("entrada").addEventListener("click", function() {
         let email = document.getElementById("gmail").value;
         let password = document.getElementById("contraseña").value;
@@ -129,6 +158,6 @@
         } else {
             showAlert("Email incorrecte", "alert-danger");
         }
-    });
+    });*/
 </script>
 </html>
