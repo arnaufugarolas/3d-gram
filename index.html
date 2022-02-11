@@ -35,9 +35,9 @@
             <div class="alert alert-danger" id="alert" role="alert" style="visibility: hidden;">
 
                 Has d'introduir el correu i la contrasenya.
-                
+
             </div>
-        
+
             <div class="Index">
                 <div class="offset-4 col-8">
                     <button type="button" id="entrada" class="botoncito">Entrar</button>
@@ -82,7 +82,6 @@
         </form>
     </div>
 </form>
-<div id="alert" role="alert"></div>
 </body>
 <script src="js/config.js"></script>
 <script src="js/firestore.js"></script>
@@ -90,74 +89,69 @@
 <script src="js/functions.js"></script>
 
 <script>
-//Capturar valores de los campos 
-		
-document.getElementById("entrada").addEventListener("click",function(){
-				
-                let usuario = document.getElementById('gmail').value;
-                let  contrasena = document.getElementById('contraseña').value;
-    
-                console.log(usuario);
-                console.log(contrasena);
-                //Validar los campos
-                if(usuario == "" || contrasena == "" ){
-                    document.getElementById("alert").style.visibility="visible"
-                 }
-                else{
-                    document.getElementById("alert").style.visibility="hidden"
-                 }
-                });
+    //Capturar valores de los campos
 
+    document.getElementById("entrada").addEventListener("click",function(){
 
+        let usuario = document.getElementById('gmail').value;
+        let  contrasena = document.getElementById('contraseña').value;
 
-
-
+        console.log(usuario);
+        console.log(contrasena);
+        //Validar los campos
+        if(usuario === "" || contrasena === "" ){
+            document.getElementById("alert").style.visibility="visible"
+        }
+        else{
+            document.getElementById("alert").style.visibility="hidden"
+        }
+    });
 
     document.getElementById("usuarionuevo").addEventListener("click", function() {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("signupForm").style.display = "block";
     });
-/*
-    document.getElementById("entrada").addEventListener("click", function() {
-        let email = document.getElementById("gmail").value;
-        let password = document.getElementById("contraseña").value;
+    /*
+        document.getElementById("entrada").addEventListener("click", function() {
+            let email = document.getElementById("gmail").value;
+            let password = document.getElementById("contraseña").value;
 
-        auth.signInWithEmailAndPassword(email, password)
-            .then(function() {
-                showAlert("Usuari autenticat", "alert-success");
+            auth.signInWithEmailAndPassword(email, password)
+                .then(function() {
+                    showAlert("Usuari autenticat", "alert-success");
 
-            })
-            .catch(function() {
-                showAlert("Error d’autenticació", "alert-danger");
-            });
-    });
-    document.getElementById("enviado").addEventListener("click", function() {
-        let email = document.getElementById("Reg_email").value;
-        let password = document.getElementById("Reg_contra").value;
-        let passwordConfirm = document.getElementById("Reg_confirmar").value;
+                })
+                .catch(function() {
+                    showAlert("Error d’autenticació", "alert-danger");
+                });
+        });
+        document.getElementById("enviado").addEventListener("click", function() {
+            let email = document.getElementById("Reg_email").value;
+            let password = document.getElementById("Reg_contra").value;
+            let passwordConfirm = document.getElementById("Reg_confirmar").value;
 
-        if (email.length > 0 && email.indexOf("@") > 1) {
-            if (password.length > 0) {
-                if (password === passwordConfirm) {
-                    auth.createUserWithEmailAndPassword(email, password)
-                        .then(function() {
-                            showAlert("Usuari creat correctament", "alert-success");
+            if (email.length > 0 && email.indexOf("@") > 1) {
+                if (password.length > 0) {
+                    if (password === passwordConfirm) {
+                        auth.createUserWithEmailAndPassword(email, password)
+                            .then(function() {
+                                showAlert("Usuari creat correctament", "alert-success");
 
-                            document.getElementById("loginForm").style.display = "block";
-                            document.getElementById("signupForm").style.display = "none";
-                        })
-                        .catch(function() {
-                            showAlert("Error al intentar crear l'usuari", "alert-danger");
-                        });
+                                document.getElementById("loginForm").style.display = "block";
+                                document.getElementById("signupForm").style.display = "none";
+                            })
+                            .catch(function() {
+                                showAlert("Error al intentar crear l'usuari", "alert-danger");
+                            });
+                    } else {
+                        showAlert("Les contrasenyes no coincideixen", "alert-danger");
+                    }
                 } else {
-                    showAlert("Les contrasenyes no coincideixen", "alert-danger");
+                    showAlert("La contrasenya és obligatòria", "alert-danger");
                 }
             } else {
-                showAlert("La contrasenya és obligatòria", "alert-danger");
+                showAlert("Email incorrecte", "alert-danger");
             }
-        } else {
-            showAlert("Email incorrecte", "alert-danger");
-        }
-    });*/
+        });*/
 </script>
 </html>
