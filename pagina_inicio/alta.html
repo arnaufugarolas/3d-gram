@@ -4,45 +4,54 @@
     <meta charset="UTF-8">
     <title>Nuevo 3D-Gram</title>
     <link href="../css/alta.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/firestore.js"></script>
+    <script src="../js/storage.js"></script>
 </head>
 <body>
-    <div class="subir_imagen" id="subida">
-        <form>
-            <div class="diseño">
-                <label for="titulo" class="letras">Títol:</label>
-                <div class="col-8">
-                    <input type="text" class="field" id="titulo">
-                </div>
+<div class="upload" id="upload">
+    <form name="uploadForm" id="uploadform" method="POST" onsubmit="return" action="inicio.html">
+        <div>
+            <label for="upload_titulo" class="letras">Títol:</label>
+            <div class="col-8">
+                <input type="text" class="input" id="upload_titulo" required>
             </div>
-            <div class="diseño">
-                <label for="contenido" class="letras">Contingut:</label>
-                <div class="col-8">
-                    <textarea name="contenido" cols="40" rows="5" class="field" id="contenido"></textarea>
-                </div>
+        </div>
+        <div>
+            <label for="upload_descripcion" class="letras">Contingut:</label>
+            <div class="col-8">
+                <textarea name="contenido" required cols="40" rows="5" class="input" id="upload_descripcion"></textarea>
             </div>
-            <div class="diseño">
-                <label for="imagen" class="letras">Imatge del disseny 3D:</label>
-                <div class="col-6">
-                    <input type="file" accept="image/*" class="field-file" id="imagen">
-                    <label for="imagen">Escolleix la Imatge .. </label>
-                </div>
+        </div>
+        <div>
+            <label for="imagen" class="letras">Imatge del disseny 3D:</label>
+            <input type="file" required accept="image/*" class="field-file" id="imagen">
+            <label for="imagen">Escolleix la Imatge .. </label>
+        </div>
+        <div>
+            <label for="diseño3d" class="letras">Diseny3D:</label>
+            <input type="file" required accept=".stl" class="field-file" id="diseño3d">
+            <label for="diseño3d">Escolleix el Disseny-3D .. </label>
+        </div>
+        <div>
+            <div class="botoncito">
+                <button type="submit" id="guardado" class="botonletra">Penjar publicació</button>
             </div>
-            <div class="diseño">
-                <label for="diseño3d" class="letras">Diseny3D:</label>
-                <div class="col-6">
-                    <input type="file" accept=".stl" class="field-file" id="diseño3d">
-                    <label for="diseño3d">Escolleix el Disseny-3D .. </label>
-                </div>
-            </div>
-            <div class="diseño">
-                <div class="botoncito">
-                    <button type="button" id="guardado" class="botonletra">Penjar publicació</button>
-                </div> 
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 
 <!--lo enviamos de vuelta-->
-</div>	
+</div>
 </body>
+<script>
+
+
+
+</script>
 </html>

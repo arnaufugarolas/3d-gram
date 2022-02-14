@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image:url(../imagenes/fondo_conocenos.jpg)
+
+}
+.conocenos{
+    font-family: Arial, serif;
+    font-size: x-large;
+}
+.title{
+margin: 3%;
+margin-left: 12%;
+text-align: left; 
+font-family: Arial Black; 
+font-weight: bold; 
+font-size: 40px; 
+color: #112D4E;
+text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+
+}
+.parrafo{
+color: whitesmoke;
+margin-left: 12%;
+margin-right: 12%;
+}
+.foto_trabajando{
+width: 35%;
+margin-left: 12%;
+margin-top: 4%;
+border-radius: 10px;
+}
