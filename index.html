@@ -134,45 +134,18 @@
             document.getElementById("singup_rep_password").setCustomValidity("Els camps 'Contrasenya' i 'Confirmar contrasenya' han de ser iguals");
             return false
         }
-        try {
-            db.collection("users")
-                .get()
-                .then((users) => {
-                    users.forEach((user) => {
-                        if (repetit){return;}
-                        if (user.data().username === username) {
-                            console.log(user.data())
-                            repetit = true
-                            throw ("F")
-                        }
-                    })
-                    throw ("F")
-                });
-        }
-        catch (e) {
-            if (repetit) {
-                document.getElementById("singup_user").setCustomValidity("Aquest usuari ja existeix");
-                console.log("Repetido bro")
-                return false
-            }
-            auth.createUserWithEmailAndPassword(email, password)
-                .then(function(userobj) {
-                    console.log(userobj)
-                    db.collection("users").add({
-                        uid: userobj.uid,
-                        username: username,
-                    })
+        auth.createUserWithEmailAndPassword(email, password)
+            .then(function(userobj) {
+                console.log(userobj)
+                db.collection("users").add({
+                    uid: userobj.uid,
+                    username: username,
                 })
-                .catch(function(error) {
-                    console.log(error)
-                });
-        }
-
-
-
-
-
-
+                document.forms['signupform'].submit();
+            })
+            .catch(function(error) {
+                console.log(error)
+            });
 
     }
 
