@@ -15,35 +15,37 @@
     <div class="cube"></div>
     <div class="Derecha">
         <div class="Titulo"><h2>3D-gram</h2></div>
-        <div class="Descripcion"><h3>Bienvenido a 3D-Gram, con nuestra aplicación puedes ver diseños de impresión 3D,
-            ademas puedes subir tus propios diseños para que la gente los vea i descargue!</h3></div>
+        <div class="Descripcion">
+            <h3>
+                Bienvenido a 3D-Gram, con nuestra aplicación puedes ver diseños de impresión 3D,
+                ademas puedes subir tus propios diseños para que la gente los vea i descargue!
+            </h3>
+        </div>
     </div>
-    <div class="logear" id="loginForm">
+    <div class="logear" id="login">
         <div class="caja">
-            <div class="imagenLogo"></div>
-            <div class="Index">
+            <div class="logo"></div>
+            <div class="index">
                 <label class="inicio" for="gmail">Correu electrònic:</label>
                 <div class="definir">
                     <input class="field" id="gmail" type="email">
                 </div>
             </div>
-            <div class="Index">
+            <div class="index">
                 <label class="inicio" for="contraseña">Contrasenya:</label>
                 <div class="definir">
                     <input class="field" id="contraseña" type="password">
                 </div>
             </div>
             <div class="alert alert-danger" id="alert" role="alert" style="visibility: hidden;">
-
                 Has d'introduir el correu i la contrasenya.
-
             </div>
 
-            <div class="Index">
+            <div class="index">
                 <div class="offset-4 col-8">
-                    <button class="botoncito" id="entrada" type="button">Entrar</button>
+                    <button class="boton01" id="entrada" type="button">Entrar</button>
                     <div class="CrearCuenta">No tienes cuenta?, creala!</div>
-                    <button class="botoncito2" id="usuarionuevo" type="button">Crear cuenta nueva</button>
+                    <button class="boton02" id="usuarionuevo" type="button">Crear cuenta nueva</button>
                 </div>
             </div>
         </div>
@@ -51,33 +53,33 @@
 
     <div class="Registro" id="signupForm" style="display: none;">
         <form>
-            <div class="Index">
+            <div class="index">
                 <label class="inicio" for="Reg_email">Correu electrònic:</label>
                 <div class="definir">
                     <input class="field" id="Reg_email" type="email">
                 </div>
             </div>
-            <div class="Index">
+            <div class="index">
                 <label class="inicio" for="Reg_usuari">Usuario:</label>
                 <div class="definir">
                     <input class="field" id="Reg_usuari" type="text">
                 </div>
             </div>
-            <div class="Index">
+            <div class="index">
                 <label class="inicio" for="Reg_contra">Contrasenya:</label>
                 <div class="definir">
                     <input class="field" id="Reg_contra" type="password">
                 </div>
             </div>
-            <div class="Index">
+            <div class="index">
                 <label class="inicio" for="Reg_confirmar">Confirmar contrasenya:</label>
                 <div class="definir">
                     <input class="field" id="Reg_confirmar" type="password">
                 </div>
             </div>
-            <div class="Index">
+            <div class="index">
                 <div class="offset-4 col-8">
-                    <button class="botoncito" id="enviado" type="button">Enviar</button>
+                    <button class="boton01" id="enviado" type="button">Enviar</button>
                 </div>
             </div>
         </form>
@@ -108,7 +110,7 @@
     });
 
     document.getElementById("usuarionuevo").addEventListener("click", function () {
-        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("login").style.display = "none";
         document.getElementById("signupForm").style.display = "block";
     });
     /*
