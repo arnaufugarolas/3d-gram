@@ -1,5 +1,5 @@
 @charset "utf-8";/* CSS Document */* {margin:0px;padding:0px;box-sizing:border-box;}body {background-color: white;}#logo {float:left;width:75%;height:70px;font-size:36px;background-color:#e2e5ed;padding:10px;color:#2c3e50;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}#menu {height:70px;font-size:16px;background-color:#e2e5ed;padding:10px;line-height:50px;vertical-align:middle;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}#menu a {text-decoration:none;color:black;margin:0px 20px;}#menu a:hover {font-weight:bold;}.enfasi_negrtita {font-weight:bold;}.derecha {max-width:100%;text-align:right;padding:10px;}.derecha a {text-decoration:none;color:#ea7f00;line-height:25px;font-family:Verdana;}.derecha a:hover {font-weight:bold;}.enfasi_color {color:darkblue;}.img_xs {width:20px;}.img_s {width:30px;}.img_m {width:150px;height:150px;}#footer {clear:both;max-width:100%;font-size:13px;background-color:skyblue;color:#e6e6e6;height:180px;padding:10px;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}#footer div {float:left;width:33%;}#footer a {text-decoration:none;color:#e6e6e6;}#footer a:hover {text-decoration:underline;}#footer ul {list-style:none;}#footer ul li {margin-left:100px;}#by {max-width:100%;font-size:10px;background-color:blueviolet;padding:10px;color:#e6e6e6;text-align:right;}
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
 
 .usuario{
     float:left;
@@ -31,3 +31,67 @@
     background: white;
     font-family: 'Trebuchet MS';
 }
+/* corazoncito*/
+.likes{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.contenido{
+  padding: 13px 16px;
+  display: flex;
+  border: 2px solid #eae2e1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contenido.corazon-active{
+  border-color: #f9b9c4;
+  background: #fbd0d8;
+}
+.corazon{
+  position: absolute;
+  background: url("img.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 90px;
+  width: 90px;
+  top: 50%;
+  left: 21%;
+  transform: translate(-50%,-50%);
+}
+.numero{
+  font-size: 21px;
+  margin-left: 30px;
+  color: grey;
+  font-family: 'Montserrat',sans-serif;
+}
+.numero:before{
+  content: '12';
+  font-size: 21px;
+  margin-left: 7px;
+  font-weight: 600;
+  color: #9C9496;
+  font-family: sans-serif;
+}
+.numero.corazon-active:before{
+  content: '13';
+  color: #000;
+}
+.numero.corazon-active{
+  color: #000;
+}
+.corazon.corazon-active{
+  animation: animate .8s steps(28) 1;
+  background-position: right;
+}
+@keyframes animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
+
+  
