@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
     <title>3D-gram</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ismael, Abdellah, Luca, Arnau">
     <link href="css/index.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -11,78 +12,69 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 </head>
 <body>
-<form>
-    <div class="cube"></div>
-    <div class="Derecha">
-        <div class="Titulo"><h2>3D-gram</h2></div>
-        <div class="Descripcion">
-            <h3>
-                Bienvenido a 3D-Gram, con nuestra aplicación puedes ver diseños de impresión 3D,
-                ademas puedes subir tus propios diseños para que la gente los vea i descargue!
-            </h3>
-        </div>
+<!-- Efecto de los cubos -->
+<div class="cube"></div>
+<!-- Bloque de izquierda -->
+<div class="bloque bloque_izquierda">
+    <div class=" h3 titulo_h3">
+        <h2>3D-gram</h2>
     </div>
-    <div class="logear" id="login">
+    <div class="h3">
+        <h3>
+            Bienvenido a 3D-Gram, con nuestra aplicación puedes ver diseños de impresión 3D,
+            además puedes subir tus propios diseños para que la gente los vea y descargue!
+        </h3>
+    </div>
+</div>
+<!-- Formulario de login -->
+<form name="loginForm" id="loginform" method="POST" onsubmit="return validar_login()" action="pagina_inicio/inicio.html">
+    <div class="bloque bloque_derecha" id="login">
         <div class="caja">
-            <div class="logo"></div>
-            <div class="index">
-                <label class="inicio" for="gmail">Correu electrònic:</label>
-                <div class="definir">
-                    <input class="field" id="gmail" type="email">
-                </div>
+            <div class="elemento_formulario">
+                <label class="label" for="login_email">Correu electrònic:</label>
+                <input class="input" id="login_email" type="email" required>
             </div>
-            <div class="index">
-                <label class="inicio" for="contraseña">Contrasenya:</label>
-                <div class="definir">
-                    <input class="field" id="contraseña" type="password">
-                </div>
+            <div class="elemento_formulario">
+                <label class="label" for="login_password">Contrasenya:</label>
+                <input class="input" id="login_password" type="password" required>
             </div>
             <div class="alert alert-danger" id="alert" role="alert" style="visibility: hidden;">
-                Has d'introduir el correu i la contrasenya.
+                Correu i/o Contrasenya incorrectes
             </div>
-
-            <div class="index">
-                <div class="offset-4 col-8">
-                    <button class="boton01" id="entrada" type="button">Entrar</button>
-                    <div class="CrearCuenta">No tienes cuenta?, creala!</div>
-                    <button class="boton02" id="usuarionuevo" type="button">Crear cuenta nueva</button>
-                </div>
+            <div class="elemento_formulario">
+                <button class="boton boton01" id="entrada" type="submit">Entrar</button>
+                <label class="aviso" for="login_button02">No tienes cuenta?, créala!</label>
+                <button class="boton boton02" id="login_button02" type="button">Crear cuenta nueva</button>
             </div>
         </div>
     </div>
-
-    <div class="Registro" id="signupForm" style="display: none;">
-        <form>
-            <div class="index">
-                <label class="inicio" for="Reg_email">Correu electrònic:</label>
-                <div class="definir">
-                    <input class="field" id="Reg_email" type="email">
-                </div>
+</form>
+<!-- Formulario de singup -->
+<form name="signupForm" id="signupform" method="POST" onsubmit="return validar_singup()" action="index.html">
+    <div class="bloque bloque_derecha" id="singup">
+        <div class="caja">
+            <div class="elemento_formulario">
+                <label class="label" for="singup_email">Correu electrònic:</label>
+                <input class="input" id="singup_email" type="email" required>
             </div>
-            <div class="index">
-                <label class="inicio" for="Reg_usuari">Usuario:</label>
-                <div class="definir">
-                    <input class="field" id="Reg_usuari" type="text">
-                </div>
+            <div class="elemento_formulario">
+                <label class="label" for="singup_user">Usuario:</label>
+                <input class="input" id="singup_user" type="text" required>
             </div>
-            <div class="index">
-                <label class="inicio" for="Reg_contra">Contrasenya:</label>
-                <div class="definir">
-                    <input class="field" id="Reg_contra" type="password">
-                </div>
+            <div class="elemento_formulario">
+                <label class="label" for="singup_password">Contrasenya:</label>
+                <input class="input" id="singup_password" type="password" minlength="8" required>
             </div>
-            <div class="index">
-                <label class="inicio" for="Reg_confirmar">Confirmar contrasenya:</label>
-                <div class="definir">
-                    <input class="field" id="Reg_confirmar" type="password">
-                </div>
+            <div class="elemento_formulario">
+                <label class="label" for="singup_rep_password">Confirmar contrasenya:</label>
+                <input class="input" id="singup_rep_password" type="password" minlength="8" required>
             </div>
-            <div class="index">
-                <div class="offset-4 col-8">
-                    <button class="boton01" id="enviado" type="button">Enviar</button>
-                </div>
+            <div class="elemento_formulario">
+                <button class="boton boton01" id="enviado" type="submit">Enviar</button>
+                <label for="singup_button02" class="aviso">Ya tienes cuenta?, Inicia session!</label>
+                <button class="boton boton02" id="singup_button02" type="button">Iniciar Session</button>
             </div>
-        </form>
+        </div>
     </div>
 </form>
 </body>
@@ -93,7 +85,7 @@
 
 <script>
     //Capturar valores de los campos
-
+    /*
     document.getElementById("entrada").addEventListener("click", function () {
 
         let usuario = document.getElementById('gmail').value;
@@ -108,11 +100,82 @@
             document.getElementById("alert").style.visibility = "hidden"
         }
     });
-
-    document.getElementById("usuarionuevo").addEventListener("click", function () {
+    */
+    document.getElementById("login_button02").addEventListener("click", function () {
         document.getElementById("login").style.display = "none";
-        document.getElementById("signupForm").style.display = "block";
+        document.getElementById("singup").style.display = "block";
     });
+
+    document.getElementById("singup_button02").addEventListener("click", function () {
+        document.getElementById("singup").style.display = "none";
+        document.getElementById("login").style.display = "block";
+    });
+
+    function validar_login() {
+        event.preventDefault()
+        auth.signInWithEmailAndPassword(document.getElementById('login_email').value, document.getElementById('login_password').value)
+            .then(function() {
+                document.forms['loginform'].submit();
+            })
+            .catch(function() {
+                document.getElementById("alert").style.visibility = "visible"
+            });
+    }
+
+    function validar_singup() {
+        event.preventDefault()
+        let password = document.getElementById("singup_password").value;
+        let rep_password = document.getElementById("singup_rep_password").value;
+        let username = document.getElementById("singup_user").value;
+        let email = document.getElementById("singup_email").value;
+        let repetit = false
+
+        if (password !== rep_password) {
+            document.getElementById("singup_rep_password").setCustomValidity("Els camps 'Contrasenya' i 'Confirmar contrasenya' han de ser iguals");
+            return false
+        }
+        try {
+            db.collection("users")
+                .get()
+                .then((users) => {
+                    users.forEach((user) => {
+                        if (repetit){return;}
+                        if (user.data().username === username) {
+                            console.log(user.data())
+                            repetit = true
+                            throw ("F")
+                        }
+                    })
+                    throw ("F")
+                });
+        }
+        catch (e) {
+            if (repetit) {
+                document.getElementById("singup_user").setCustomValidity("Aquest usuari ja existeix");
+                console.log("Repetido bro")
+                return false
+            }
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(function(userobj) {
+                    console.log(userobj)
+                    db.collection("users").add({
+                        uid: userobj.uid,
+                        username: username,
+                    })
+                })
+                .catch(function(error) {
+                    console.log(error)
+                });
+        }
+
+
+
+
+
+
+
+    }
+
     /*
         document.getElementById("entrada").addEventListener("click", function() {
             let email = document.getElementById("gmail").value;

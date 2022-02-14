@@ -2,46 +2,55 @@ body{
     background-color: #0040C1;
     overflow: hidden;
 }
-.Derecha{
+
+.h3 {
+    font-family: Arial, serif;
+    font-size: x-large;
+}
+
+.titulo_h3{
+    color: darkblue;
+}
+
+.caja{
+    padding-top: 100px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/d-gram-3331d.appspot.com/o/WebImages%2FLogos%2F3D-LOGO-new.png?alt=media&token=1ce547a7-d46f-4e80-879a-5798b336fca5");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 20%;
+    width: 100%;
+    height: 20%;
+}
+
+.bloque {
+    background: #E2E5ED;
+    border-radius: 20px;
+    margin: 100px;
+}
+
+.bloque_izquierda{
     float:left;
     width: 30%;
     height: 100%;
-    margin: 100px;
     padding: 10px 30px 35px 10px;
     border: 3px solid #112D4E;
-    background: #DBE2EF;
-    border-radius: 20px;
 }
-.Titulo{
-    font-family: Arial, serif;
-    font-size: x-large;
-    color: darkblue;
-}
-.Descripcion{
-    font-family: Arial, serif;
-    font-size: large;
-}
-.caja{
-    padding-top: 100px;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/d-gram-3331d.appspot.com/o/WebImages%2FLogos%2F3D-LOGO.png?alt=media&token=e5a2154f-c573-4b5b-a289-eddb41405f6b");
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: -35px;
-    width: 100%;
-    height: 20%;
-    z-index: 6;
-}
-.logear{
+
+.bloque_derecha {
     float:right;
-    width: 500px;
+    width: 25%;
     height: 500px;
-    margin: 100px;
     padding: 10px 10px 35px;
     border: 3px solid #3b5998;
-    background: #e2e5ed;
-    border-radius: 20px;
 }
-.index{
+
+#singup{
+    height: 705px;
+    border-radius: 20px;
+    display: none;
+}
+
+.elemento_formulario{
     margin-top: 15px;
     border-radius: 3px;
     font-size:xx-large;
@@ -50,7 +59,8 @@ body{
     height: 50px;
     margin-bottom: 50px;
 }
-.field{
+
+.input{
     margin-top: 10px;
     border: solid 2px #a386cc;
     border-radius: 8px;
@@ -60,44 +70,40 @@ body{
     color: #3b5998;
     padding: 15px 10px 10px;
 }
-.boton01{
+
+.input:invalid {
+    border: solid 2px #cc8686;
+}
+
+.boton {
     border: 3px solid #112D4E;
-    border-radius: 10px;
     font-size: x-large;
     color:#DBE2EF;
-    background: #3b5998;
     float: left;
+}
+
+.boton01{
+    border-radius: 10px;
+    background: #3b5998;
     margin-left: 55px;
     height: 60px;
     width: 350px;
 }
+
 .boton02{
-    margin-top: 22px;
-    border: 3px solid #112D4E;
-    font-size: x-large;
-    color:#DBE2EF;
-    background: #112D4E;
-    float: left;
-    height: 80px;
-    margin-left: -4.5%;
-    width: 109%;
     border-radius: 0 0 19px 19px;
-}
-.CrearCuenta{
-    font-size: x-large;
-    padding-top: 80px;
-    padding-left: 22%;
+    background: #112D4E;
+    margin-left: -4.5%;
+    margin-top: 22px;
+    height: 80px;
+    width: 109%;
 }
 
-.Registro{
-    float:right;
-    width: 480px;
-    height: 600px;
-    margin: 100px;
-    padding: 10px 10px 35px;
-    border: 3px solid #3b5998;
-    background: #e2e5ed;
-    border-radius: 20px;
+.aviso{
+    display: block;
+    font-size: x-large;
+    text-align: center;
+    padding-top: 80px;
 }
 
 .cube {
