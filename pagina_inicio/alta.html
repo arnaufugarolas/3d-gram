@@ -16,35 +16,35 @@
 <body>
 <div class="subir_imagen" id="subida">
     <form name="uploadForm" id="uploadform" method="POST" onsubmit="return" action="inicio.html">
-        <div class="diseño">
+        <div class="elemento_formulario">
             <label for="titulo" class="letras">Títol:</label>
             <div class="col-8">
-                <input type="text" class="field" id="titulo">
+                <input type="text" class="input" id="titulo" required>
             </div>
         </div>
         <div class="diseño">
             <label for="contenido" class="letras">Contingut:</label>
             <div class="col-8">
-                <textarea name="contenido" cols="40" rows="5" class="field" id="contenido"></textarea>
+                <textarea name="contenido" required cols="40" rows="5" class="input" id="contenido"></textarea>
             </div>
         </div>
         <div class="diseño">
             <label for="imagen" class="letras">Imatge del disseny 3D:</label>
             <div class="col-6">
-                <input type="file" accept="image/*" class="field-file" id="imagen">
+                <input type="file" required accept="image/*" class="field-file" id="imagen">
                 <label for="imagen">Escolleix la Imatge .. </label>
             </div>
         </div>
         <div class="diseño">
             <label for="diseño3d" class="letras">Diseny3D:</label>
             <div class="col-6">
-                <input type="file" accept=".stl" class="field-file" id="diseño3d">
+                <input type="file" required accept=".stl" class="field-file" id="diseño3d">
                 <label for="diseño3d">Escolleix el Disseny-3D .. </label>
             </div>
         </div>
         <div class="diseño">
             <div class="botoncito">
-                <button type="button" id="guardado" class="botonletra">Penjar publicació</button>
+                <button type="submit" id="guardado" class="botonletra">Penjar publicació</button>
             </div>
         </div>
     </form>
