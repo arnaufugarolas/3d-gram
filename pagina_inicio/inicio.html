@@ -5,6 +5,7 @@
 <title>Inicio - 3D-Gram</title>
 <link rel="icon" href="#" type="image/x-icon" />
 <link rel="stylesheet" href="../pagina_inicio/inicio.css" type="text/css" />  
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,8 @@
         <a href="alta.html">Añadir diseño</a>
     </div>
     <div class="usuario">
+        <div>imagen</div>
+        <div>usuario</div>
         <!-- Aqui va el usuario + imagen personalizada suya (si ponemos eso)-->
     </div> 
     <div class="cajita">	  
@@ -27,6 +30,13 @@
     </div>
     <div class="abajo">
         <!-- Zona de Likes + Comentarios + extensiones posibles -->
+    <div class="likes">
+        <div class="contenido">
+            <span class="corazon"></span>
+            <span class="like"></span>
+            <span class="numero"></span>
+        </div>
+    </div>
     </div>
     <div id="footer">
     	<div>
@@ -42,5 +52,16 @@
     <div id="by">
     	Fet per Arnau, Abdellah, Luca, Ismael
     </div>
+    <script>
+        $(document).ready(function(){
+          $('.likes').click(function(){
+            $('.contenido').toggleClass("corazon-active")
+            $('.like').toggleClass("corazon-active")
+            $('.numero').toggleClass("corazon-active")
+            $('.corazon').toggleClass("corazon-active")
+          });
+        });
+      </script>
 </body>
+
 </html>
