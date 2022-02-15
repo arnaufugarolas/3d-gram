@@ -22,7 +22,7 @@
 }
 .abajo{
     float:left;
-    width: 40%;
+    width: 5%;
     height: 80px;
     margin-left: 30%;
     padding: 0px;
@@ -35,15 +35,8 @@
 .likes{
   position: relative;
   top: 50%;
-  left: 50%;
+  left: 80%;
   transform: translate(-50%,-50%);
-}
-.contenido{
-  padding: 13px 16px;
-  display: flex;
-  border: 2px solid #eae2e1;
-  border-radius: 5px;
-  cursor: pointer;
 }
 .contenido.corazon-active{
   border-color: #f9b9c4;
@@ -55,28 +48,9 @@
   background-position: left;
   background-size: 2900%;
   height: 90px;
-  width: 90px;
-  top: 50%;
+  width: 120px;
   left: 21%;
   transform: translate(-50%,-50%);
-}
-.numero{
-  font-size: 21px;
-  margin-left: 30px;
-  color: grey;
-  font-family: 'Montserrat',sans-serif;
-}
-.numero:before{
-  content: '12';
-  font-size: 21px;
-  margin-left: 7px;
-  font-weight: 600;
-  color: #9C9496;
-  font-family: sans-serif;
-}
-.numero.corazon-active:before{
-  content: '13';
-  color: #000;
 }
 .numero.corazon-active{
   color: #000;
