@@ -136,7 +136,7 @@
         auth.createUserWithEmailAndPassword(email, password)
             .then(function(userobj) {
                 console.log(userobj)
-                db.collection("users").add({
+                db.collection("users").doc(userobj.uid).set({
                     uid: userobj.uid,
                     username: username,
                 })
