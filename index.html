@@ -119,9 +119,7 @@
         }
         auth.createUserWithEmailAndPassword(email, password)
             .then(function(userobj) {
-                console.log(userobj)
-                db.collection("users").doc(userobj.uid).update({
-                    uid: userobj.uid,
+                db.collection("users").doc(userobj.uid).set({
                     username: username,
                 })
                 document.forms['signupform'].submit();
