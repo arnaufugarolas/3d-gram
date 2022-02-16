@@ -1,48 +1,150 @@
-@charset "utf-8";/* CSS Document */* {margin:0px;padding:0px;box-sizing:border-box;}body {background-color: white;}#logo {float:left;width:75%;height:70px;font-size:36px;background-color:#e2e5ed;padding:10px;color:#2c3e50;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}#menu {height:70px;font-size:16px;background-color:#e2e5ed;padding:10px;line-height:50px;vertical-align:middle;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}#menu a {text-decoration:none;color:black;margin:0px 20px;}#menu a:hover {font-weight:bold;}.enfasi_negrtita {font-weight:bold;}.derecha {max-width:100%;text-align:right;padding:10px;}.derecha a {text-decoration:none;color:#ea7f00;line-height:25px;font-family:Verdana;}.derecha a:hover {font-weight:bold;}.enfasi_color {color:darkblue;}.img_xs {width:20px;}.img_s {width:30px;}.img_m {width:150px;height:150px;}#footer {clear:both;max-width:100%;font-size:13px;background-color:skyblue;color:#e6e6e6;height:180px;padding:10px;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}#footer div {float:left;width:33%;}#footer a {text-decoration:none;color:#e6e6e6;}#footer a:hover {text-decoration:underline;}#footer ul {list-style:none;}#footer ul li {margin-left:100px;}#by {max-width:100%;font-size:10px;background-color:blueviolet;padding:10px;color:#e6e6e6;text-align:right;}
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+@charset "utf-8"; /* CSS Document */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+}
+#logo {
+  float: left;
+  width: 75%;
+  height: 70px;
+  font-size: 36px;
+  background-color: #e2e5ed;
+  padding: 10px;
+  color: #2c3e50;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#menu {
+  height: 70px;
+  font-size: 16px;
+  background-color: #e2e5ed;
+  padding: 10px;
+  line-height: 50px;
+  vertical-align: middle;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#menu a {
+  text-decoration: none;
+  color: #112D4E;
+  margin: 0px 20px;
+}
+#menu a:hover {
+  font-weight: bold;
+}
+.enfasi_negrtita {
+  font-weight: bold;
+}
+.derecha {
+  max-width: 100%;
+  text-align: right;
+  padding: 10px;
+}
+.derecha a {
+  text-decoration: none;
+  color: #ea7f00;
+  line-height: 25px;
+  font-family: Verdana;
+}
+.derecha a:hover {
+  font-weight: bold;
+}
+.enfasi_color {
+ 
+}
+.img_xs {
+  width: 20px;
+}
+.img_s {
+  width: 30px;
+}
+.img_m {
+  width: 150px;
+  height: 150px;
+}
+#footer {
+  clear: both;
+  max-width: 100%;
+  font-size: 13px;
+  background-color: #112D4E;
+  color: #e6e6e6;
+  height: 80px;
+  padding: 10px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#footer div {
+  float: left;
+  width: 33%;
+}
+#footer a {
+  text-decoration: none;
+  color: #e6e6e6;
+}
+#footer a:hover {
+  text-decoration: underline;
+}
+#footer ul {
+  list-style: none;
+}
+#footer ul li {
+  margin-left: 100px;
+}
 
-.usuario{
-    float:left;
-    width: 40%;
-    height: 80px;
-    margin-top: 20px;
-    margin-left: 30%;
-    border: 3px solid #ea7f00;
-    background: white;
-    font-family: 'Trebuchet MS';
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
+.imagen {
+  width: 20%;
 }
-.cajita{
-    float:left;
-    width: 40%;
-    height: 50%;
-    margin-left: 30%;
-    border: 3px solid #ea7f00;
-    background: white;
-    font-family: 'Trebuchet MS';
+.usuario {
+  float: left;
+  width: 39%;
+  height: 38%;
+  margin-top: 3%;
+  margin-left: 30%;
+  border: 2px solid #dbe2ef;
+
+  background: #dbe2ef;
+  font-family: "Trebuchet MS";
 }
-.abajo{
-    float:left;
-    width: 5%;
-    height: 80px;
-    margin-left: 30%;
-    padding: 0px;
-    margin-bottom: 10px;
-    border: 3px solid #ea7f00;
-    background: white;
-    font-family: 'Trebuchet MS';
+.fotos {
+}
+.cajita {
+  float: left;
+  width: 39%;
+  height: 50%;
+  margin-left: 30%;
+  border: 2px solid #dbe2ef;
+  border-top: none;
+
+  background: white;
+  font-family: "Trebuchet MS";
+}
+.abajo {
+  float: left;
+  width: 5%;
+  height: 80px;
+  margin-left: 30%;
+  padding: 0px;
+  margin-bottom: 10px;
+  background: white;
+  font-family: "Trebuchet MS";
+}
+.titulo{
+  font-family: "Trebuchet MS";
 }
 /* corazoncito*/
-.likes{
+.likes {
   position: relative;
   top: 50%;
   left: 80%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.contenido.corazon-active{
+.contenido.corazon-active {
   border-color: #f9b9c4;
   background: #fbd0d8;
 }
-.corazon{
+.corazon {
   position: absolute;
   background: url("img.png") no-repeat;
   background-position: left;
@@ -50,22 +152,20 @@
   height: 90px;
   width: 120px;
   left: 21%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.numero.corazon-active{
+.numero.corazon-active {
   color: #000;
 }
-.corazon.corazon-active{
-  animation: animate .8s steps(28) 1;
+.corazon.corazon-active {
+  animation: animate 0.8s steps(28) 1;
   background-position: right;
 }
 @keyframes animate {
-  0%{
+  0% {
     background-position: left;
   }
-  100%{
+  100% {
     background-position: right;
   }
 }
-
-  
