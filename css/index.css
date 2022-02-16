@@ -70,7 +70,7 @@ body{
 }
 
 .input:invalid {
-    border: solid 2px #cc8686;
+    border: solid 2px #0040C1;
 }
 
 .alert{
@@ -101,14 +101,25 @@ body{
 }
 
 .boton02{
-    border-radius: 3px 3px 20px 20px;
+    border-radius: 3px 3px 15px 15px;
     background: #112D4E;
     margin-left: -4.5%;
-    margin-top: 22px;
-    height: 150%;
+    margin-top: 30px;
+    height: 152%;
     width: 109%;
 }
-
+.boton03{
+    border-radius: 3px 3px 15px 15px;
+    background: #112D4E;
+    margin-left: -4.5%;
+    margin-top: 30px;
+    height: 180%;
+    width: 109%;
+}
+.boton04{
+    position:absolute;
+    margin-top: 450px;
+}
 .aviso{
     display: block;
     font-size: x-large;
