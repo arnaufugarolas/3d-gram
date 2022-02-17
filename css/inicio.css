@@ -155,7 +155,7 @@ body {
 }
 .corazon {
   position: absolute;
-  background: url("img.png") no-repeat;
+  background: url("../imagenes/img.png") no-repeat;
   background-position: left;
   background-size: 2900%;
   height: 90px;
