@@ -149,12 +149,16 @@
     botonGoogle.addEventListener('click', e => {
         const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider)
-            .then(result => {
+            .then(userobj => {
+                if (userobj.additionalUserInfo.isNewUser) {
+                    const email_user = new RegExp("^.*.@")
+                    let username = email_user.exec(userobj.user.email)[0].replace("@", "")
+                    db.collection("users").doc(userobj.user.uid).set({
+                        username: username,
+                    })
+                }
                 document.forms['loginform'].submit();
-            })
-            .catch(error => {
-                console.log(error)
-            })
+            });
     })
 
     //login facebook
