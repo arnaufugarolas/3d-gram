@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Nuevo 3D-Gram</title>
@@ -49,38 +49,36 @@
 <script>
     function validar_upload() {
         event.preventDefault()
-
-        const stl = new RegExp('^.*.stl$');
-        const img = new RegExp('^image/..*');
-
-        if (!img.test(document.getElementById("upload_img").files[0].type)) {
+        if (!RegExp('^image/..*').test(document.getElementById("upload_img").files[0].type)) {
             document.getElementById("upload_img").setCustomValidity("Nomes pots pujar imatges");
             return false
         }
 
-        if (!stl.test(document.getElementById("upload_design").files[0].name)) {
+        if (RegExp('\\.[^.\\\\/:*?\"<>|\\r\\n]+$').exec(document.getElementById("upload_design").files[0].name)[0] !== ".stl" ) {
             document.getElementById("upload_design").setCustomValidity("Nomes pots pujar arxius stl");
             return false
         }
-
-        let post = db.collection("post").add({
-            user: db.doc('users/' + auth.O),
-            title: document.getElementById("upload_descripcion").value,
-            description: document.getElementById("upload_descripcion").value,
-            image: "images/uploads/algo",
-            design: "designs/uploads/algo",
-            date: firebase.firestore.FieldValue.serverTimestamp(),
-        })
-
-        //var imagenRef = firebase.storage().ref("images/" + document.getElementById("upload_img").files[0].name);
-
-        //imagenRef.put(document.getElementById("imagen").files[0]);
-
-
-
-
-
+        db.collection("posts").add({})
+            .then(post => {
+                let img_ext = RegExp("\\.[^.\\\\/:*?\"<>|\\r\\n]+$").exec(document.getElementById("upload_img").files[0].name)[0]
+                storageRef.child("/images/" + post.id + img_ext).put(document.getElementById("upload_img").files[0])
+                    .then(() =>{
+                        storageRef.child("/designs/" + post.id + ".stl").put(document.getElementById("upload_design").files[0])
+                            .then(() =>{
+                                db.collection("posts").doc(post.id).set({
+                                    title: document.getElementById("upload_title").value,
+                                    description: document.getElementById("upload_description").value,
+                                    image: "/images/" + post.id + img_ext,
+                                    design: "/designs/" + post.id + ".stl",
+                                    user: db.doc('users/' + auth.O),
+                                    date: firebase.firestore.FieldValue.serverTimestamp(),
+                                })
+                                    .then(() =>{
+                                        document.forms['uploadForm'].submit();
+                                    })
+                            })
+                    })
+            })
     }
-
 </script>
 </html>
