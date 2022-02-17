@@ -48,7 +48,7 @@
                 <button  class="loginBtn loginBtn--facebook" id="facebooklogin" type="button">facebook</button>
                 <label class="aviso" for="login_button02">No tienes cuenta?, créala!</label>
                 <button class="boton boton02" id="login_button02" type="button">Crea un nou compte</button>
-                
+
             </div>
         </div>
     </div>
@@ -120,16 +120,28 @@
             document.getElementById("singup_rep_password").setCustomValidity("Els camps 'Contrasenya' i 'Confirmar contrasenya' han de ser iguals");
             return false
         }
-        auth.createUserWithEmailAndPassword(email, password)
-            .then(function(userobj) {
-                db.collection("users").doc(userobj.uid).set({
-                    username: username,
+        else {
+            db.collection("users").where("username", "==", username)
+                .get()
+                .then((users) => {
+                    if (users.size !== 0) {
+                        console.log("Ya Existe")
+                        document.getElementById("singup_user").setCustomValidity("L'usuari ja existeix");
+                        return false
+                    }
+                    else {
+                        auth.createUserWithEmailAndPassword(email, password)
+                            .then(function(userobj) {
+                                db.collection("users").doc(userobj.uid).set({
+                                    username: username,
+                                })
+                                    .then(function () {
+                                        document.forms['signupform'].submit()
+                                    })
+                            });
+                    }
                 })
-                document.forms['signupform'].submit();
-            })
-            .catch(function(error) {
-                console.log(error)
-            });
+        }
     }
 
     //login google
