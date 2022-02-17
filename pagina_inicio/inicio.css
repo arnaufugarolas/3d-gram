@@ -132,6 +132,15 @@ body {
 }
 .titulo{
   font-family: "Trebuchet MS";
+  font-weight:bold;
+  color: #112D4E;
+  text-decoration: underline;
+}
+.descripcion{
+  font-family: "Trebuchet MS";
+  color: #2c3e50;
+  margin-top: 2%;
+  
 }
 /* corazoncito*/
 .likes {

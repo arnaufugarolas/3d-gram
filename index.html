@@ -17,18 +17,17 @@
 <!-- Bloque de izquierda -->
 <div class="bloque bloque_izquierda">
     <div class=" h3 titulo_h3">
-        <h2>3D-gram</h2>
+        <h2>3D-GRAM</h2>
     </div>
     <div class="h3">
         <h3>
-            Bienvenido a 3D-Gram, con nuestra aplicación puedes ver diseños de impresión 3D,
-            además puedes subir tus propios diseños para que la gente los vea y descargue!
+            Benvingut a 3D-Gram, amb la nostra aplicació podeu veure dissenys d'impressió 3D,
+            a més pots pujar els teus propis dissenys perquè la gent els vegi i descarregui!
         </h3>
     </div>
 </div>
 <!-- Formulario de login -->
-<button class="boton boton04" id="googlelogin" type="button">Google</button>
-<button class="boton boton05" id="facebooklogin" type="button">facebook</button>
+
 <form name="loginForm" id="loginform" method="POST" onsubmit="return validar_login()" action="pagina_inicio/inicio.html">
     <div class="bloque bloque_derecha" id="login">
         <div class="caja">
@@ -45,8 +44,11 @@
             </div>
             <div class="elemento_formulario">
                 <button class="boton boton01" id="entrada" type="submit">Entrar</button>
+                <button class="loginBtn loginBtn--google" id="googlelogin" type="button">Google</button>
+                <button  class="loginBtn loginBtn--facebook" id="facebooklogin" type="button">facebook</button>
                 <label class="aviso" for="login_button02">No tienes cuenta?, créala!</label>
-                <button class="boton boton02" id="login_button02" type="button">Crear cuenta nueva</button>
+                <button class="boton boton02" id="login_button02" type="button">Crea un nou compte</button>
+                
             </div>
         </div>
     </div>
