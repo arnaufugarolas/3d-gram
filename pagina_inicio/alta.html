@@ -14,38 +14,37 @@
     <script src="../js/storage.js"></script>
 </head>
 <body>
-<div class="upload" id="upload">
-    <form name="uploadForm" id="uploadform" method="POST" onsubmit="return validar_upload();" action="inicio.html">
+<form name="uploadForm" id="uploadform" method="POST" onsubmit="return validar_upload();" action="inicio.html">
+    <div class="upload-form">
         <div>
-            <label for="upload_titulo" class="letras">Títol:</label>
+            <label for="upload_title" class="label">Títol:</label>
             <div class="col-8">
-                <input type="text" class="input" id="upload_titulo" required>
+                <input type="text" class="input" id="upload_title" required>
             </div>
         </div>
         <div>
-            <label for="upload_descripcion" class="letras">Contingut:</label>
+            <label for="upload_description" class="label">Contingut:</label>
             <div class="col-8">
-                <textarea name="contenido" required cols="40" rows="5" class="input" id="upload_descripcion"></textarea>
+                <textarea name="description" required cols="40" rows="5" class="input" id="upload_description"></textarea>
             </div>
         </div>
         <div>
-            <label for="upload_img" class="letras">Imatge del disseny 3D:</label>
+            <label for="upload_img" class="label">Imatge del disseny 3D:</label>
             <input type="file" required accept="image/*" class="field-file" id="upload_img">
             <label for="upload_img">Escolleix la Imatge .. </label>
         </div>
         <div>
-            <label for="upload_design" class="letras">Diseny3D:</label>
+            <label for="upload_design" class="label">Diseny3D:</label>
             <input type="file" required accept=".stl" class="field-file" id="upload_design">
             <label for="upload_design">Escolleix el Disseny-3D .. </label>
         </div>
         <div>
-            <div class="botoncito">
-                <button type="submit" id="guardado" class="botonletra">Penjar publicació</button>
+            <div>
+                <button type="submit" id="upload_submit" class="boton">Penjar publicació</button>
             </div>
         </div>
-    </form>
-</div>
-
+    </div>
+</form>
 </body>
 <script>
     function validar_upload() {
@@ -64,9 +63,8 @@
             return false
         }
 
-        db.collection("post").add({
-            //user: db.doc('users/' + auth.O).ref,
-            //user: db.collection('users').doc(auth.O).ref,
+        let post = db.collection("post").add({
+            user: db.doc('users/' + auth.O),
             title: document.getElementById("upload_descripcion").value,
             description: document.getElementById("upload_descripcion").value,
             image: "images/uploads/algo",
