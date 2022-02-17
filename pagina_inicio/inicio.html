@@ -1,75 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <title>Inicio - 3D-Gram</title>
-    <link rel="icon" href="#" type="image/x-icon" />
-    <link rel="stylesheet" href="../pagina_inicio/inicio.css" type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Inicio - 3D-Gram</title>
+  <link rel="icon" href="#" type="image/x-icon" />
+  <link rel="stylesheet" href="../pagina_inicio/inicio.css" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
 
-  <body>
-    <div id="logo">
-      <img
-        class="img_s"
-        src="https://firebasestorage.googleapis.com/v0/b/d-gram-3331d.appspot.com/o/WebImages%2FLogos%2FICONO%203D-GRAM.png?alt=media&token=5ee73bd2-c737-46e6-932e-48e748a33e3e"
-        alt="logo"
-      />
-      3D<span class="enfasi_color">-</span>GRAM
-    </div>
-    <div id="menu">
-      <a href="entrar.html">INICI</a>
-      <a href="alta.html">PUBLICAR</a>
-    </div>
+<body>
+<div id="logo">
+  <img
+          class="img_s"
+          src="https://firebasestorage.googleapis.com/v0/b/d-gram-3331d.appspot.com/o/WebImages%2FLogos%2FICONO%203D-GRAM.png?alt=media&token=5ee73bd2-c737-46e6-932e-48e748a33e3e"
+          alt="logo"
+  />
+  3D<span class="enfasi_color">-</span>GRAM
+</div>
+<div id="menu">
+  <a href="entrar.html">INICI</a>
+  <a href="alta.html">PUBLICAR</a>
+</div>
 
-    <h2 class="usuario">@admin</h2>
-    <!-- Aqui va el usuario + imagen personalizada suya (si ponemos eso)-->
+<h2 class="usuario">@admin</h2>
+<!-- Aqui va el usuario + imagen personalizada suya (si ponemos eso)-->
 
-    <div class="cajita">
-      <div class="fotos">
-        <img
-          src="../imagenes/benchie_3d.jpg"
-          width="100%"
-          height="100%"
-          alt="foto muestra"
-        />
-        <div class="titulo">Benchie</div>
-        <div class="descripcion">"Un pequeño barquito."</div>
-        <!--Aquí van las fotos, no sé aun como se configurarà el tema tamaño-->
-      </div>
+<div class="cajita">
+  <div class="fotos">
+    <img
+            src="../imagenes/benchie_3d.jpg"
+            width="100%"
+            height="100%"
+            alt="foto muestra"
+    />
+    <div class="titulo">Benchie</div>
+    <div class="descripcion">"Un pequeño barquito."</div>
+    <!--Aquí van las fotos, no sé aun como se configurarà el tema tamaño-->
+  </div>
+</div>
+<div class="abajo">
+  <!-- Zona de Likes + Comentarios + extensiones posibles -->
+  <div class="likes">
+    <div class="contenido">
+
+      <span class="corazon"></span>
+      <span class="like"></span>
+      <span class="numero"></span>
     </div>
-    <div class="abajo">
-      <!-- Zona de Likes + Comentarios + extensiones posibles -->
-        <div class="likes">
-        <div class="contenido">
-           
-          <span class="corazon"></span>
-          <span class="like"></span>
-          <span class="numero"></span>
-        </div>
-      </div>
-    </div>
-    
-    <div id="footer">
-      <div>
-        <ul>
-          <li><a href="conocenos.html">Sobre nosaltres</a></li>
-        </ul>
-      </div>
-      <ul>
-        <li><a href="politica_privacidad.html">Politica de privacitat</a></li>
-      </ul>
-    </div>
-    <script>
-      $(document).ready(function () {
-        $(".likes").click(function () {
-          $(".contenido").toggleClass("corazon-active");
-          $(".like").toggleClass("corazon-active");
-          $(".numero").toggleClass("corazon-active");
-          $(".corazon").toggleClass("corazon-active");
-        });
-      });
-      
-    </script>
-  </body>
+  </div>
+</div>
+
+<div id="footer">
+  <div>
+    <ul>
+      <li><a href="conocenos.html">Sobre nosaltres</a></li>
+    </ul>
+  </div>
+  <ul>
+    <li><a href="politica_privacidad.html">Politica de privacitat</a></li>
+  </ul>
+</div>
+<script>
+  $(document).ready(function () {
+    $(".likes").click(function () {
+      $(".contenido").toggleClass("corazon-active");
+      $(".like").toggleClass("corazon-active");
+      $(".numero").toggleClass("corazon-active");
+      $(".corazon").toggleClass("corazon-active");
+    });
+  });
+</script>
+</body>
 </html>
