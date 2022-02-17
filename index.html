@@ -131,33 +131,32 @@
                 console.log(error)
             });
     }
+
     //login google
+    const botonGoogle = document.querySelector('#googlelogin')
+    botonGoogle.addEventListener('click', e => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        auth.signInWithPopup(provider)
+            .then(result => {
+                document.forms['loginform'].submit();
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    })
 
-   const botonGoogle = document.querySelector('#googlelogin')
-   botonGoogle.addEventListener('click', e => {
-   const provider = new firebase.auth.GoogleAuthProvider(); 
-   auth.signInWithPopup(provider)
-    .then(result => {
-        console.log('google sign in')
-    })
-    .catch(err => {
-        console.log('ERROR->' + err)
-    })
-})
     //login facebook
-
     const botonfacebook = document.querySelector('#facebooklogin')
     botonfacebook.addEventListener('click', e => {
-    e.preventDefault();
-    const provider = new firebase.auth.FacebookAuthProvider(); 
-    auth.signInWithPopup(provider)
-     .then(result => {
-        console.log(result)
-        console.log('Entrar con facebook')
+        e.preventDefault();
+        const provider = new firebase.auth.FacebookAuthProvider();
+        auth.signInWithPopup(provider)
+            .then(result => {
+                document.forms['loginform'].submit();
+            })
+            .catch(error => {
+                console.log(error)
+            })
     })
-    .catch(err => {
-        console.log('Facebook error->' + err)
-    })
-})
 </script>
 </html>

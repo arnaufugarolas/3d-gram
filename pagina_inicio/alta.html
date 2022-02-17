@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="upload" id="upload">
-    <form name="uploadForm" id="uploadform" method="POST" onsubmit="return" action="inicio.html">
+    <form name="uploadForm" id="uploadform" method="POST" onsubmit="return validar_upload();" action="inicio.html">
         <div>
             <label for="upload_titulo" class="letras">Títol:</label>
             <div class="col-8">
@@ -29,14 +29,14 @@
             </div>
         </div>
         <div>
-            <label for="imagen" class="letras">Imatge del disseny 3D:</label>
-            <input type="file" required accept="image/*" class="field-file" id="imagen">
-            <label for="imagen">Escolleix la Imatge .. </label>
+            <label for="upload_img" class="letras">Imatge del disseny 3D:</label>
+            <input type="file" required accept="image/*" class="field-file" id="upload_img">
+            <label for="upload_img">Escolleix la Imatge .. </label>
         </div>
         <div>
-            <label for="diseño3d" class="letras">Diseny3D:</label>
-            <input type="file" required accept=".stl" class="field-file" id="diseño3d">
-            <label for="diseño3d">Escolleix el Disseny-3D .. </label>
+            <label for="upload_design" class="letras">Diseny3D:</label>
+            <input type="file" required accept=".stl" class="field-file" id="upload_design">
+            <label for="upload_design">Escolleix el Disseny-3D .. </label>
         </div>
         <div>
             <div class="botoncito">
@@ -46,12 +46,43 @@
     </form>
 </div>
 
-<!--lo enviamos de vuelta-->
-</div>
 </body>
 <script>
+    function validar_upload() {
+        event.preventDefault()
+
+        const stl = new RegExp('^.*.stl$');
+        const img = new RegExp('^image/..*');
+
+        if (!img.test(document.getElementById("upload_img").files[0].type)) {
+            document.getElementById("upload_img").setCustomValidity("Nomes pots pujar imatges");
+            return false
+        }
+
+        if (!stl.test(document.getElementById("upload_design").files[0].name)) {
+            document.getElementById("upload_design").setCustomValidity("Nomes pots pujar arxius stl");
+            return false
+        }
+
+        db.collection("post").add({
+            //user: db.doc('users/' + auth.O).ref,
+            //user: db.collection('users').doc(auth.O).ref,
+            title: document.getElementById("upload_descripcion").value,
+            description: document.getElementById("upload_descripcion").value,
+            image: "images/uploads/algo",
+            design: "designs/uploads/algo",
+            date: firebase.firestore.FieldValue.serverTimestamp(),
+        })
+
+        //var imagenRef = firebase.storage().ref("images/" + document.getElementById("upload_img").files[0].name);
+
+        //imagenRef.put(document.getElementById("imagen").files[0]);
 
 
+
+
+
+    }
 
 </script>
 </html>
