@@ -3,12 +3,12 @@ let storageRef = storage.ref();
 function deleteFile(url) {
     return new Promise((resolve, reject) => {
         storage.refFromURL(url).delete()
-        .then(() => {
-            resolve();
-        })
-        .catch(() => {
-            reject();
-        });
+            .then(() => {
+                resolve();
+            })
+            .catch(() => {
+                reject();
+            });
     });
 }
 
@@ -19,12 +19,12 @@ function uploadFile(url) {
         reader.onloadend = () => {
             let randomId = Math.random().toString(36).substr(2);
             storage.ref().child('images').child('items').child(randomId).putString(reader.result, "data_url")
-            .then((snapshot) => {
-                resolve(snapshot.downloadURL);
-            })
-            .catch(() => {
-                reject();
-            });
+                .then((snapshot) => {
+                    resolve(snapshot.downloadURL);
+                })
+                .catch(() => {
+                    reject();
+                });
         }
     });
 }
