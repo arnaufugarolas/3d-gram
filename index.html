@@ -152,9 +152,9 @@
             .then(userobj => {
                 if (userobj.additionalUserInfo.isNewUser) {
                     const email_user = new RegExp("^.*.@")
-                    let username = email_user.exec(userobj.user.email)[0].replace("@", "")
+                    let user = email_user.exec(userobj.user.email)[0].replace("@", "")
                     db.collection("users").doc(userobj.user.uid).set({
-                        username: username,
+                        username: user,
                     })
                 }
                 document.forms['loginform'].submit();
@@ -167,12 +167,16 @@
         e.preventDefault();
         const provider = new firebase.auth.FacebookAuthProvider();
         auth.signInWithPopup(provider)
-            .then(result => {
+            .then(userobj => {
+                if (userobj.additionalUserInfo.isNewUser) {
+                    const email_user = new RegExp("^.*.@")
+                    let user = email_user.exec(userobj.user.email)[0].replace("@", "")
+                    db.collection("users").doc(userobj.user.uid).set({
+                        username: user,
+                    })
+                }
                 document.forms['loginform'].submit();
-            })
-            .catch(error => {
-                console.log(error)
-            })
+            });
     })
 </script>
 </html>
