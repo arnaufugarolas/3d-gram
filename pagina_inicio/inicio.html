@@ -21,35 +21,26 @@
   <a href="../index.html">LOGOUT</a>
   <a href="alta.html">PUBLICAR</a>
 </div>
-
-<h2 class="usuario">@admin</h2>
-<!-- Aqui va el usuario + imagen personalizada suya (si ponemos eso)-->
-
-<div class="cajita">
-  <div class="fotos">
-    <img
-            src="../imagenes/benchie_3d.jpg"
-            width="100%"
-            height="100%"
-            alt="foto muestra"
-    />
-    <div class="titulo">Benchie</div>
-    <div class="descripcion">"Un pequeño barquito."</div>
-    <!--Aquí van las fotos, no sé aun como se configurarà el tema tamaño-->
+<div class="post">
+  <h2 class="usuario">$user$</h2>
+  <div class="caja">
+    <div class="fotos">
+      <img src="$url$" width="100%" height="100%" alt="foto muestra"/>
+      <div class="titulo">$title$</div>
+      <div class="descripcion">$description$</div>
+    </div>
   </div>
 </div>
-<div class="abajo">
-  <!-- Zona de Likes + Comentarios + extensiones posibles -->
+
+<!--<div class="abajo">
   <div class="likes">
     <div class="contenido">
-
       <span class="corazon"></span>
       <span class="like"></span>
       <span class="numero"></span>
     </div>
   </div>
-</div>
-
+</div>-->
 <div id="footer">
   <div>
     <ul>
@@ -62,13 +53,27 @@
 </div>
 <script>
   $(document).ready(function () {
+
+  });
+  /*
+    <div class="post">
+  <h2 class="usuario">$user$</h2>
+  <div class="caja">
+    <div class="fotos">
+      <img src="$url$" width="100%" height="100%" alt="foto muestra"/>
+      <div class="titulo">$title$</div>
+      <div class="descripcion">$description$</div>
+    </div>
+  </div>
+</div>
+  $(document).ready(function () {
     $(".likes").click(function () {
       $(".contenido").toggleClass("corazon-active");
       $(".like").toggleClass("corazon-active");
       $(".numero").toggleClass("corazon-active");
       $(".corazon").toggleClass("corazon-active");
     });
-  });
+   */
 </script>
 </body>
 </html>

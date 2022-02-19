@@ -156,6 +156,9 @@
                     db.collection("users").doc(userobj.user.uid).set({
                         username: user,
                     })
+                        .then(
+                            document.forms['loginform'].submit()
+                        )
                 }
                 document.forms['loginform'].submit();
             });
@@ -174,6 +177,9 @@
                     db.collection("users").doc(userobj.user.uid).set({
                         username: user,
                     })
+                        .then(
+                            document.forms['loginform'].submit()
+                        )
                 }
                 document.forms['loginform'].submit();
             });
