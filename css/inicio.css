@@ -46,7 +46,7 @@ body {
   text-decoration: none;
   color: #ea7f00;
   line-height: 25px;
-  font-family: Verdana;
+  font-family: Verdana, serif;
 }
 .derecha a:hover {
   font-weight: bold;
