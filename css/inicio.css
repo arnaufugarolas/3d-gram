@@ -1,12 +1,15 @@
-@charset "utf-8"; /* CSS Document */
+@charset "utf-8";
+
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: white;
 }
+
 #logo {
   float: left;
   width: 75%;
@@ -17,6 +20,7 @@ body {
   color: #2c3e50;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
 #menu {
   height: 70px;
   font-size: 16px;
@@ -26,44 +30,47 @@ body {
   vertical-align: middle;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
 #menu a {
   text-decoration: none;
   color: #112D4E;
-  margin: 0px 20px;
+  margin: 0 20px;
 }
+
 #menu a:hover {
   font-weight: bold;
 }
+
 .enfasi_negrtita {
   font-weight: bold;
 }
+
 .derecha {
   max-width: 100%;
   text-align: right;
   padding: 10px;
 }
+
 .derecha a {
   text-decoration: none;
   color: #ea7f00;
   line-height: 25px;
-  font-family: Verdana;
+  font-family: Verdana, serif;
 }
+
 .derecha a:hover {
   font-weight: bold;
 }
-.enfasi_color {
- 
-}
-.img_xs {
-  width: 20px;
-}
+
 .img_s {
   width: 30px;
 }
-.img_m {
-  width: 150px;
-  height: 150px;
+
+#posts {
+  width: 100%;
 }
+
+/* Footer */
 #footer {
   clear: both;
   max-width: 100%;
@@ -73,29 +80,35 @@ body {
   height: 80px;
   padding: 10px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-top: 5%;
 }
+
 #footer div {
   float: left;
   width: 33%;
 }
+
 #footer a {
   text-decoration: none;
   color: #e6e6e6;
 }
+
 #footer a:hover {
   text-decoration: underline;
 }
+
 #footer ul {
   list-style: none;
 }
+
 #footer ul li {
   margin-left: 100px;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
 .imagen {
   width: 20%;
 }
+
 .usuario {
   float: left;
   width: 39%;
@@ -103,45 +116,46 @@ body {
   margin-top: 3%;
   margin-left: 30%;
   border: 2px solid #dbe2ef;
-
   background: #dbe2ef;
-  font-family: "Trebuchet MS";
+  font-family: "Trebuchet MS", serif;
 }
-.fotos {
-}
-.cajita {
+
+.caja {
   float: left;
   width: 39%;
   height: 50%;
   margin-left: 30%;
   border: 2px solid #dbe2ef;
   border-top: none;
-
   background: white;
-  font-family: "Trebuchet MS";
+  font-family: "Trebuchet MS", serif;
 }
+
 .abajo {
   float: left;
   width: 5%;
   height: 80px;
   margin-left: 30%;
-  padding: 0px;
+  padding: 0;
   margin-bottom: 10px;
   background: white;
-  font-family: "Trebuchet MS";
+  font-family: "Trebuchet MS", serif;
 }
+
 .titulo{
-  font-family: "Trebuchet MS";
+  font-family: "Trebuchet MS", serif;
   font-weight:bold;
   color: #112D4E;
   text-decoration: underline;
 }
+
 .descripcion{
-  font-family: "Trebuchet MS";
+  font-family: "Trebuchet MS", serif;
   color: #2c3e50;
   margin-top: 2%;
   
 }
+
 /* corazoncito*/
 .likes {
   position: relative;
@@ -149,27 +163,31 @@ body {
   left: 80%;
   transform: translate(-50%, -50%);
 }
+
 .contenido.corazon-active {
   border-color: #f9b9c4;
   background: #fbd0d8;
 }
+
 .corazon {
   position: absolute;
-  background: url("../imagenes/img.png") no-repeat;
-  background-position: left;
+  background: url("../imagenes/img.png") no-repeat left;
   background-size: 2900%;
   height: 90px;
   width: 120px;
   left: 21%;
   transform: translate(-50%, -50%);
 }
+
 .numero.corazon-active {
   color: #000;
 }
+
 .corazon.corazon-active {
   animation: animate 0.8s steps(28) 1;
   background-position: right;
 }
+
 @keyframes animate {
   0% {
     background-position: left;
