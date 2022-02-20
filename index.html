@@ -119,17 +119,14 @@
         if (password !== rep_password) {
             document.getElementById("singup_rep_password").setCustomValidity("Els camps 'Contrasenya' i 'Confirmar contrasenya' han de ser iguals");
             return false
-        }
-        else {
+        } else {
             db.collection("users").where("username", "==", username)
                 .get()
                 .then((users) => {
                     if (users.size !== 0) {
-                        console.log("Ya Existe")
                         document.getElementById("singup_user").setCustomValidity("L'usuari ja existeix");
                         return false
-                    }
-                    else {
+                    } else {
                         auth.createUserWithEmailAndPassword(email, password)
                             .then(function(userobj) {
                                 db.collection("users").doc(userobj.uid).set({
@@ -149,15 +146,13 @@
     botonGoogle.addEventListener('click', e => {
         const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider)
-            .then(userobj => {
+            .then(function(userobj) {
                 if (userobj.additionalUserInfo.isNewUser) {
-                    const email_user = new RegExp("^.*.@")
-                    let user = email_user.exec(userobj.user.email)[0].replace("@", "")
+                    let user = RegExp("^.*.@").exec(userobj.user.email)[0].replace("@", "")
                     db.collection("users").doc(userobj.user.uid).set({
                         username: user,
                     })
-                        .then(
-                            document.forms['loginform'].submit()
+                        .then(function () {document.forms['loginform'].submit()}
                         )
                 }
                 document.forms['loginform'].submit();
@@ -170,15 +165,13 @@
         e.preventDefault();
         const provider = new firebase.auth.FacebookAuthProvider();
         auth.signInWithPopup(provider)
-            .then(userobj => {
+            .then(function(userobj) {
                 if (userobj.additionalUserInfo.isNewUser) {
-                    const email_user = new RegExp("^.*.@")
-                    let user = email_user.exec(userobj.user.email)[0].replace("@", "")
+                    let user = RegExp("^.*.@").exec(userobj.user.email)[0].replace("@", "")
                     db.collection("users").doc(userobj.user.uid).set({
                         username: user,
                     })
-                        .then(
-                            document.forms['loginform'].submit()
+                        .then(function () {document.forms['loginform'].submit()}
                         )
                 }
                 document.forms['loginform'].submit();
