@@ -45,6 +45,7 @@
             <div class="elemento_formulario">
                 <button class="boton boton01" id="entrada" type="submit">Entrar</button>
                 <button class="loginBtn loginBtn--google" id="googlelogin" type="button">Google</button>
+                <button class="nose" id="recContra" type="button">Contra</button>
                 <button  class="loginBtn loginBtn--facebook" id="facebooklogin" type="button">facebook</button>
                 <label class="aviso" for="login_button02">No tienes cuenta?, créala!</label>
                 <button class="boton boton02" id="login_button02" type="button">Crea un nou compte</button>
@@ -168,11 +169,29 @@
         const provider = new firebase.auth.FacebookAuthProvider();
         auth.signInWithPopup(provider)
             .then(result => {
-                document.forms['loginform'].submit();
+                console.log(result)
+                //document.forms['loginform'].submit();
             })
             .catch(error => {
                 console.log(error)
             })
     })
+
+    //reset de contraseña
+    const mailField = document.getElementById('login_email')
+    const resetPassword = document.getElementById('recContra')
+    const resetPasswordFunction = () =>{
+        const email =mailField.value;
+
+        auth.sendPasswordResetEmail(email).then(() => {
+            console.log('Reseteo de contraseña')
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
+    resetPassword.addEventListener('click',resetPasswordFunction);
+
+
 </script>
 </html>
