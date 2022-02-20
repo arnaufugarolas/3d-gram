@@ -28,7 +28,6 @@
     function validar_resetPassword() {
         event.preventDefault()
         auth.sendPasswordResetEmail(document.getElementById('resetform_email').value).then(() => {
-            console.log('Reseteo de contraseña')
             alert("S'ha enviat un email al teu correu amb les especificacions necessaries");
             document.forms['resetform'].submit();
         })
