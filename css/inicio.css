@@ -131,6 +131,19 @@ body {
   font-family: "Trebuchet MS", serif;
 }
 
+.descargar {
+  float: right;
+  background-color: #112D4E;
+  border-radius: 15px;
+  padding: 1%;
+}
+
+.descargar > a {
+  text-decoration: none;
+  color: #dbe2ef;
+  font-family: "Trebuchet MS", serif;
+}
+
 .abajo {
   float: left;
   width: 5%;

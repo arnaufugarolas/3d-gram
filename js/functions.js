@@ -26,7 +26,7 @@ function addPost(postobject, post_table) {
                                 let description = postobject.data().description;
                                 let image = image_url;
                                 let design = design_url;
-                                document.getElementById(post_table).innerHTML += `<tr><td><div class="post"><h2 class="usuario">${username}</h2><div class="caja"><div class="fotos"><img src="${image}" width="100%" height="100%" alt="${title}"/><div class="titulo">${title}</div><div class="descripcion">${description}</div></div></div><div class="abajo"><div class="likes"><div class="contenido"><span class="corazon"></span><span class="like"></span><span class="numero"></span></div></div></div></div></td></tr>`
+                                document.getElementById(post_table).innerHTML += `<tr><td><div class="post"><h2 class="usuario">${username}</h2><div class="caja"><div class="fotos"><img src="${image}" width="100%" height="100%" alt="${title}"/><div class="titulo">${title} <button class="descargar"><a href="${design}" download="${title}">Descargar</a></button></div><div class="descripcion">${description}</div></div></div></div></div></div></td></tr>`
                                 resolve();
                             })
                     })
